@@ -36,7 +36,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      //padding: 20px;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -56,10 +55,10 @@
           position: absolute;
           border-radius: 12px;
           z-index: 1;
-          top: -125px;
+          top: -123px;
           right: 124px;
           transform: rotate(45deg);
-          background-color: #24a7ad;
+          background-color: theme-palette-color('color', 'primary');
         }
 
       }
@@ -70,20 +69,78 @@
         padding: 40px;
 
         .content-form-login {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
+          width: 100%;
 
-          img {
-            width: 200px;
-            height: 100px;
-            object-fit: contain;
+
+          .content-form-login-head {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            img {
+              width: 200px;
+              height: 100px;
+              object-fit: contain;
+            }
+
+            h1 {
+              font-size: 24px;
+              font-weight: 600;
+              color: theme-palette-color('color', 'primary');
+            }
           }
 
-          h1 {
-            font-size: 24px;
-            font-weight: 600;
-            color: #24a7ad;
+
+          .content-form-login-body {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px 40px 20px 40px;
+          }
+
+          .content-form-social-networks {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            em {
+              font-size: 32px;
+              padding: 12px;
+              border: 1px solid theme-palette-color('grays', 300);
+              border-radius: 6px;
+            }
+
+          }
+
+          .content-login-button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 32px;
+            padding: 0 40px;
+
+            span {
+              color: theme-palette-color('color', 'primary');
+            }
+
+            button {
+              width: 100%;
+              padding: 12px 24px;
+              background-color: theme-palette-color('color', 'primary');
+              cursor: pointer;
+              outline: none;
+              border: none;
+              font-family: $font-family;
+              color: white;
+              border-radius: 6px;
+              margin-top: 12px;
+            }
 
           }
 

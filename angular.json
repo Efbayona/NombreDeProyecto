@@ -30,7 +30,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/icomoon/style.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -98,7 +99,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/fonts/icomoon/style.css"
             ],
             "scripts": []
           }

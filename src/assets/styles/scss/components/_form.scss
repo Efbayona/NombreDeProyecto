@@ -1,0 +1,37 @@
+.form-container {
+  display: grid;
+  width: 100%;
+
+  .form-group {
+    position: relative;
+    margin-bottom: 16px;
+    margin-top: 4px;
+
+    .form-input {
+      width: 100%;
+      background: none;
+      color: theme-palette-color('font', 'title');
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      outline: 0.6px solid theme-palette-color('grays', 600);
+      font-family: $font-family;
+      height: 36px;
+      cursor: text;
+      border-radius: 4px;
+    }
+
+    .form-label {
+      display: inline-block;
+      color: theme-palette-color('font', 'title');
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+
+    .form-input:focus ~ .form-line {
+      transform: scale(1);
+    }
+  }
+}

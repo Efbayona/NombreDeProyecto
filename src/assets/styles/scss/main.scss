@@ -1,0 +1,11 @@
+/*** 1. Normalize ***/
+@import "normalize/normalize";
+
+/*** 2. Pallet ***/
+@import "themes/theme";
+
+/*** 3. Variables ***/
+@import "abstracts/variables";
+
+/*** 4. Components ***/
+@import "components/alerts";

@@ -11,6 +11,5 @@ export class LoginComponent implements OnInit{
   constructor(private _alert: AlertService) {
   }
   ngOnInit() {
-    this._alert.warning('Funca');
   }
 }

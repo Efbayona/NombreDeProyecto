@@ -19,13 +19,14 @@
           </div>
           <p class="content-title">Hola, Bienvenido de nuevo</p>
           <div class="content-form-login-body">
-            <form autocomplete="off">
+            <form  [formGroup]="formLogin" autocomplete="off">
               <div class="grid">
                 <div class="col-12">
                   <div class="form-container">
                     <div class="form-group">
                       <label class="form-label">Usuario</label>
                       <input type="text" class="form-input"
+                             formControlName="user_name"
                              placeholder="Ingresa tu nombre de usuario">
                     </div>
                   </div>
@@ -35,6 +36,7 @@
                     <div class="form-group">
                       <label class="form-label">Contraseña</label>
                       <input type="text" class="form-input"
+                             formControlName="user_password"
                              placeholder="Ingresa tu contraseña">
                     </div>
                   </div>
@@ -56,3 +58,5 @@
     </div>
   </div>
 </div>
+
+

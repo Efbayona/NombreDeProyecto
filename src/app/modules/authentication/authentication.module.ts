@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     CommonModule,
     AuthenticationRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ]
 })
 export class AuthenticationModule { }

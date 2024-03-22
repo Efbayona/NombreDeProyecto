@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import {RouterModule} from "@angular/router";
     BrowserModule,
     RouterModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 2000

@@ -7,8 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('@app/modules/administration/administration.module').then(m => m.AdministrationModule)
   },
   {
-    path: 'auth',
-    loadChildren: () => import('@app/modules/authentication/authentication.module').then(m => m.AuthenticationModule)
+    path: '',
+    loadChildren: () => import('@app/modules/authentication/authentication.module').then(m => m.AuthenticationModule),
   }
 ];
 

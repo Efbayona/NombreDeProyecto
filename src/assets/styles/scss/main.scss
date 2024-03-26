@@ -10,8 +10,10 @@
 /*** 4. Components ***/
 @import "components/alerts";
 @import "components/form";
+@import "components/base";
 
 /*** 5. Pages ***/
-@import "pages/login";
+@import "pages/authentication/login";
+@import "pages/authentication/multifactor";
 @import "pages/dashboard";
 @import "pages/main";

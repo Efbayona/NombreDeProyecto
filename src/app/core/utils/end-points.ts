@@ -1,3 +1,3 @@
 export const enum EndPoints {
-  LOGIN = 'Login',
+  LOGIN = 'secure/auth/login',
 }

@@ -4,6 +4,7 @@ import {AuthenticationService} from "@app/modules/authentication/services/authen
 import {MatDialog} from "@angular/material/dialog";
 import {Router} from "@angular/router";
 import {environment} from "@env/environment";
+import {MultiFactorComponent} from "@app/modules/authentication/pages/multi-factor/multi-factor.component";
 
 @Component({
   selector: 'app-login',
@@ -46,9 +47,9 @@ export class LoginComponent implements OnInit {
           console.log('ejecuta')
           this.formLogin.reset();
           //Buscar Como setear y obtener data del local de mejor forma
-          // this.dialog.open(MultifactorAuthenticationComponent , {
-          //   width: '600px'
-          //  })
+           this.dialog.open(MultiFactorComponent , {
+             width: '600px'
+            })
         }
       })
     } else {

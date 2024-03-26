@@ -11,7 +11,7 @@ export class AuthenticationService {
   constructor(private _http: HttpService ) { }
 
   public login(authLogin: any): Observable<any>{
-    return this._http.post<any, any>(EndPoints.LOGIN , authLogin);
+    return this._http.post<any, any>(EndPoints.LOGIN , authLogin , true);
   }
 
 }

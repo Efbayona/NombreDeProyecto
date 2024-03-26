@@ -1,0 +1,34 @@
+<div class="modal-auth">
+  <img *ngIf="!mfaEmail" alt="google_authenticator" src="assets/images/google-authenticator.png">
+  <img *ngIf="mfaEmail" alt="device" src="assets/images/google-authenticator.png">
+  <h2 class="title-modal">Verifiquemos que realmente eres el propietario de la cuenta</h2>
+  <div class="content-header">
+      <span
+        *ngIf="mfaEmail">Acabamos de enviar un código de verificación de 6 dígitos a tu correo {{ email }}</span>
+    <span *ngIf="!mfaEmail">Entra a Google authenticator y digita el código generado por tu aplicación</span>
+  </div>
+  <div class="form-key">
+    <code-input #codeInput
+                (codeCompleted)="onCodeCompleted($event)"
+                [codeLength]="6"
+                [isCodeHidden]="false">
+    </code-input >
+  </div>
+  <span *ngIf="mfaEmail" class="text-modal">El código tiene un tiempo de expiración de 5 minutos ¿No lo has recibido?
+      <a (click)="resendCode();">Reenviar</a> un nuevo código.
+    </span>
+  <div class="modal-footer">
+    <button (click)="sendCode()" [disabled]="!codeValid" class="btn-generic" type="submit">
+      Confirmar
+    </button>
+  </div>
+  <section class="example-section">
+    <mat-progress-bar
+      [color]="color"
+      [mode]="mode"
+      [value]="value"
+      class="example-margin">
+    </mat-progress-bar>
+  </section>
+</div>
+

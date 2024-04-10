@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'app',
+    path: 'administration',
     loadChildren: () => import('@app/modules/administration/administration.module').then(m => m.AdministrationModule)
   },
   {

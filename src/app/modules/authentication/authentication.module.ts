@@ -4,7 +4,7 @@ import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDialogModule} from "@angular/material/dialog";
-import { MultiFactorComponent } from './pages/multi-factor/multi-factor.component';
+import { MultiFactorComponent } from '@app/modules/authentication/pages/multifactor-authentication/multi-factor.component';
 import {CodeInputModule} from "angular-code-input";
 import {SharedModule} from "@app/shared/shared.module";
 

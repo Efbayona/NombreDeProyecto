@@ -2,9 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthenticationService} from "@app/modules/authentication/services/authentication.service";
 import {MatDialog} from "@angular/material/dialog";
-import {Router} from "@angular/router";
 import {environment} from "@env/environment";
-import {MultiFactorComponent} from "@app/modules/authentication/pages/multi-factor/multi-factor.component";
+import {MultiFactorComponent} from "@app/modules/authentication/pages/multifactor-authentication/multi-factor.component";
+import {StorageService} from "@app/core/services/storage/storage.service";
+import {UserLoginRequest, UserLoginResponse} from "@app/modules/authentication/interfaces/authentication.interface";
+
 
 @Component({
   selector: 'app-login',
@@ -14,13 +16,13 @@ import {MultiFactorComponent} from "@app/modules/authentication/pages/multi-fact
 export class LoginComponent implements OnInit {
 
   variable: string = environment.api + 'oauth2/authorization/google';
+
   public formLogin: FormGroup = new FormGroup({});
 
   constructor(private auth: AuthenticationService,
               private dialog: MatDialog,
-              private router: Router,) {
+              private storage: StorageService) {
   }
-
 
   ngOnInit() {
     this.initFormLogin();
@@ -35,26 +37,27 @@ export class LoginComponent implements OnInit {
 
 
   sendLogin(){
-    console.log('ejecuta')
+
     if(this.formLogin.valid){
-      // this.loader.show();
-      const authLogin: any = {
+
+      const authLogin: UserLoginRequest = {
         user_name: this.formLogin.get('user_name')?.value,
         user_password: this.formLogin.get('user_password')?.value
       }
+
       this.auth.login(authLogin).subscribe({
-        next: (data: any) =>{
-          console.log('ejecuta')
+        next: (data: UserLoginResponse) =>{
+          this.storage.setItem('user_login', data);
           this.formLogin.reset();
-          //Buscar Como setear y obtener data del local de mejor forma
-           this.dialog.open(MultiFactorComponent , {
+           this.dialog.open(MultiFactorComponent ,{
              width: '600px'
-            })
+            });
         }
       })
     } else {
       this.formLogin.markAllAsTouched();
     }
+
   }
 
 }

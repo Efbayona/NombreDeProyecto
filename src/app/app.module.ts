@@ -8,6 +8,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {RouterModule} from "@angular/router";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ApiPrefixInterceptor} from "@app/core/interceptors/api-prefix/api-prefix.interceptor";
+import {NgxWebstorageModule} from "ngx-webstorage";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {ApiPrefixInterceptor} from "@app/core/interceptors/api-prefix/api-prefix
     ToastrModule.forRoot({
       timeOut: 2000
     }),
+    NgxWebstorageModule.forRoot(),
   ],
   providers: [
     {

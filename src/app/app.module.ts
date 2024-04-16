@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ApiPrefixInterceptor} from "@app/core/interceptors/api-prefix/api-prefix.interceptor";
 import {NgxWebstorageModule} from "ngx-webstorage";
+import {SharedModule} from "@app/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {NgxWebstorageModule} from "ngx-webstorage";
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    SharedModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({
       timeOut: 2000

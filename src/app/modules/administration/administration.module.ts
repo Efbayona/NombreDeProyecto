@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {AdministrationRoutingModule} from './administration-routing.module';
 import {MainComponent} from "@app/modules/administration/pages/main/main.component";
 import {DashboardComponent} from "@app/modules/administration/pages/dashboard/dashboard.component";
@@ -9,10 +9,11 @@ import {DashboardComponent} from "@app/modules/administration/pages/dashboard/da
     MainComponent,
     DashboardComponent
   ],
-  imports: [
-    CommonModule,
-    AdministrationRoutingModule
-  ]
+	imports: [
+		CommonModule,
+		AdministrationRoutingModule,
+		NgOptimizedImage
+	]
 })
 export class AdministrationModule {
 }

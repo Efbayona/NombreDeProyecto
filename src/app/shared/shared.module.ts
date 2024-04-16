@@ -9,7 +9,7 @@ import {ShowPasswordDirective} from "@app/shared/directives/password/show-passwo
   ],
   imports: [
     CommonModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   exports: [
     MatProgressBarModule,

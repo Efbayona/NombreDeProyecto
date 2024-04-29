@@ -4,12 +4,15 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {ShowPasswordDirective} from "@app/shared/directives/password/show-password.directive";
 import {LoadingComponent} from "@app/shared/layouts/loading/loading.component";
 import {InputMaskDirective} from "@app/shared/directives/input-mask/input-mask.directive";
+import {CardComponent} from "@app/shared/layouts/card/card.component";
+
 
 @NgModule({
   declarations: [
     ShowPasswordDirective,
     LoadingComponent,
-    InputMaskDirective
+    InputMaskDirective,
+    CardComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +22,8 @@ import {InputMaskDirective} from "@app/shared/directives/input-mask/input-mask.d
     MatProgressBarModule,
     ShowPasswordDirective,
     LoadingComponent,
-    InputMaskDirective
+    InputMaskDirective,
+    CardComponent
   ]
 })
 export class SharedModule { }

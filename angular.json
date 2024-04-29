@@ -31,14 +31,19 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts/icomoon/style.css"
+              "src/assets/fonts/icomoon/style.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
                 "src/assets/styles/scss"
               ]
             },
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,9 +105,14 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/fonts/icomoon/style.css"
+              "src/assets/fonts/icomoon/style.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
+            ]
           }
         }
       }

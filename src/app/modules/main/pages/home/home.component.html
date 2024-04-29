@@ -1,16 +1,47 @@
 <div class="wrapper-content-home">
 
   <div class="content-home">
-    <div class="content-header-home">
+
+    <div class="content-home-header">
 
     </div>
-    <div class="content-home-carousel">
+
+    <div class="content-carousel">
+      <div class="content-carousel-first-block">
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem class="carousel" *ngFor="let slide of slides">
+            <img src="{{ slide.src }}" alt="img">
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <div class="content-carousel-second-block">
+        <div class="section-first">
+          <img src="" alt="">
+        </div>
+        <div class="section-second">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="content-products">
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+      <app-card></app-card>
+    </div>
+
+    <div class="div">
+
+      <div>
+        <span><em class="ic"></em></span>
+      </div>
+
 
     </div>
 
-    <div>
 
-    </div>
 
 
   </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Categories} from "@app/modules/main/interfaces/home.interface";
 
 @Component({
   selector: 'app-home',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+
+  notificationList: Categories[] = [];
 
   slides = [
     {src: "/assets/images/carousel/camiseta-negra.jpg"},

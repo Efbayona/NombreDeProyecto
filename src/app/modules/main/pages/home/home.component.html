@@ -4,6 +4,57 @@
 
     <div class="content-home-header">
 
+
+      <div class="header-icon">
+        <div class="div1">
+          <div class="div2">
+            <span>Tittle</span>
+          </div>
+          <div class="div3">
+            <span>Categorias</span>
+            <span>Ofertas</span>
+          </div>
+
+        </div>
+
+        <div class="notification-container">
+          <span>Tops</span>
+          <span>Pantalones</span>
+          <span>Vestidos</span>
+          <span>Faldas</span>
+          <span>Ropa de abrigo</span>
+          <span>Ropa de baño</span>
+          <span>Ropa interior</span>
+          <span>Accesorios</span>
+          <span>Zapatos</span>
+          <label class="notification" *ngFor="let notification of notificationList; let i = index">
+            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
+            <div class="content-data-notification">
+              <div class="content-text-notification">
+                <span class="first-title">{{ notification.title }}</span>
+                <span>{{ notification.description }}</span>
+              </div>
+              <i class="material-icons dp48 right">clear</i>
+            </div>
+          </label>
+        </div>
+        <!--                <div class="screen-gray"></div>-->
+
+
+      </div>
+
+      <div class="header-search-input">
+        <input autocomplete="off" class="search-input"
+               placeholder="Búsqueda rápida">
+        <label><em class="icon-search"></em></label>
+
+      </div>
+      <div class="header-buttons">
+        <label><em class="icon-heart"></em></label>
+        <label><em class="icon-shopping-cart"></em></label>
+        <button class="button-login">Iniciar sesion</button>
+      </div>
+
     </div>
 
     <div class="content-carousel">
@@ -40,8 +91,6 @@
 
 
     </div>
-
-
 
 
   </div>

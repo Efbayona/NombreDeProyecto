@@ -1,4 +1,4 @@
-import  { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {LocalStorageService} from "ngx-webstorage";
 
 @Injectable({
@@ -6,7 +6,8 @@ import {LocalStorageService} from "ngx-webstorage";
 })
 export class StorageService {
 
-  constructor(private localStorage: LocalStorageService) {}
+  constructor(private localStorage: LocalStorageService) {
+  }
 
   setItem(key: string, value: any): void {
     this.localStorage.store(key, value);

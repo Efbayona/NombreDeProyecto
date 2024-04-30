@@ -4,6 +4,8 @@ import { MainRoutingModule } from './main-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {SharedModule} from "@app/shared/shared.module";
+import {FormsModule} from "@angular/forms";
+import {NgSelectModule} from "@ng-select/ng-select";
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import {SharedModule} from "@app/shared/shared.module";
     CommonModule,
     MainRoutingModule,
     SlickCarouselModule,
-    SharedModule
+    SharedModule,
+    NgSelectModule
   ]
 })
 export class MainModule { }

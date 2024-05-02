@@ -1,20 +1,30 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Categories} from "@app/modules/main/interfaces/home.interface";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
+  constructor(private router: Router) {
+  }
+
+  ngOnInit() {
+
+  }
+
+  value: boolean = false;
+  menuCategories: boolean = false;
 
   notificationList: Categories[] = [];
 
   slides = [
+    {src: "/assets/images/carousel/carousel-3.jpg"},
+    {src: "/assets/images/carousel/carousel-4.jpg"},
     {src: "/assets/images/carousel/camiseta-negra.jpg"},
-    {src: "/assets/images/carousel/camiseta-verde.png"},
-    {src: "/assets/images/carousel/camiseta-negra.png"},
   ];
 
   slideConfig = {
@@ -45,5 +55,9 @@ export class HomeComponent {
       }
     ]
   };
+
+  navigate() {
+    this.router.navigateByUrl('/product').then();
+  }
 
 }

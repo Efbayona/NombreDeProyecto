@@ -1,162 +1,88 @@
-<div class="wrapper-content-home">
-
-  <div class="content-home">
-
+<div class="wrapper-content-main">
+  <div class="content-main">
     <div class="content-home-header">
-
-
       <div class="header-icon">
         <div class="div1">
           <div class="div2">
-<!--            <img src="assets/images/logo-home.jpg" alt="logo">-->
+            <img src="assets/images/logo-home.jpg" alt="logo">
           </div>
           <div class="div3">
-            <span>Categorias</span>
+            <span>Categorias <em></em></span>
             <span>Ofertas</span>
           </div>
-
         </div>
-
-<!--        <div class="notification-container" >-->
-<!--          <span>Tops</span>-->
-<!--          <span>Pantalones</span>-->
-<!--          <span>Vestidos</span>-->
-<!--          <span>Faldas</span>-->
-<!--          <span>Ropa de abrigo</span>-->
-<!--          <span>Ropa de baño</span>-->
-<!--          <span>Ropa interior</span>-->
-<!--          <span>Accesorios</span>-->
-<!--          <span>Zapatos</span>-->
-<!--          <label class="notification" *ngFor="let notification of notificationList; let i = index">-->
-<!--            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">-->
-<!--            <div class="content-data-notification">-->
-<!--              <div class="content-text-notification">-->
-<!--                <span class="first-title">{{ notification.title }}</span>-->
-<!--                <span>{{ notification.description }}</span>-->
-<!--              </div>-->
-<!--              <i class="material-icons dp48 right">clear</i>-->
-<!--            </div>-->
-<!--          </label>-->
-<!--        </div>-->
+        <div class="notification-container" *ngIf="categories">
+          <span>Tops</span>
+          <span>Pantalones</span>
+          <span>Vestidos</span>
+          <span>Faldas</span>
+          <span>Ropa de abrigo</span>
+          <span>Ropa de baño</span>
+          <span>Ropa interior</span>
+          <span>Accesorios</span>
+          <span>Zapatos</span>
+          <label class="notification" *ngFor="let notification of notificationList; let i = index">
+            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
+            <div class="content-data-notification">
+              <div class="content-text-notification">
+                <span class="first-title">{{ notification.title }}</span>
+                <span>{{ notification.description }}</span>
+              </div>
+              <i class="material-icons dp48 right">clear</i>
+            </div>
+          </label>
+        </div>
         <div class="screen-gray" *ngIf="value"></div>
-
-
       </div>
-
       <div class="header-search-input">
         <input autocomplete="off" class="search-input"
                placeholder="Búsqueda rápida">
         <label><em class="icon-search"></em></label>
       </div>
-
       <div class="header-buttons">
         <label><em class="icon-heart"></em></label>
-        <label><em class="icon-shopping-cart"></em></label>
+        <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>
         <button class="button-login">Iniciar sesion</button>
       </div>
-
     </div>
-
-    <div class="content-carousel">
-      <div class="content-carousel-first-block">
-        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
-          <div ngxSlickItem class="carousel" *ngFor="let slide of slides">
-            <img src="{{ slide.src }}" alt="img">
-          </div>
-        </ngx-slick-carousel>
-      </div>
-      <div class="content-carousel-second-block">
-        <div class="section-first">
-          <img src="assets/images/carousel.jpg" alt="carousel-1">
-        </div>
-        <div class="section-second">
-          <img src="assets/images/carousel-2.jpg" alt="carousel-2">
-        </div>
-      </div>
+    <div class="container-main-content">
+      <router-outlet></router-outlet>
     </div>
-
-    <div class="content-products">
-      <span class="content-products-title">Nuevos Lanzamientos</span>
-      <div class="div">
-        <app-card (click)="navigate()"></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-      </div>
-    </div>
-
-    <div class="content-new-releases">
-      <div class="header-new-releases">
-        <div class="new-releases-block">
-          <div class="news">
-            <span>Novedades</span>
-            <span>ENCUENTRA LAS</span>
-            <span>MEJORES MARCAS</span>
-            <button class="button-new-releases">Ver más</button>
-          </div>
-          <img src="assets/images/marcas-1.jpg">
-        </div>
-        <div class="new-releases-block">
-          <div class="news">
-            <span>Novedades</span>
-            <span>ENCUENTRA LAS</span>
-            <span>MEJORES MARCAS</span>
-            <button class="button-new-releases">Ver más</button>
-          </div>
-          <img src="assets/images/marcas-2.jpg">
-        </div>
-      </div>
-    </div>
-
     <div class="footer-home">
-
       <div class="footer-home-first-block">
         <div class="footer-home-first-block-1">
           <h3 class="footer-home-title">Demo logo</h3>
           <span class="footer-home-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </span>
-
         </div>
         <div class="footer-home-first-block-2">
-
           <div class="footer-home-first-block-2-content">
             <h3 class="footer-home-subtitle">Company</h3>
             <span class="footer-home-text">About us</span>
             <span class="footer-home-text">Investment</span>
             <span class="footer-home-text">Recent News</span>
           </div>
-
           <div class="footer-home-first-block-2-content">
             <h3 class="footer-home-subtitle">Resources</h3>
             <span class="footer-home-text">Company</span>
             <span class="footer-home-text">Company</span>
             <span class="footer-home-text">Recent News</span>
           </div>
-
           <div class="footer-home-first-block-2-content">
             <h3 class="footer-home-subtitle">Investments</h3>
             <span class="footer-home-text">incubation of small bussiness</span>
             <span class="footer-home-text">investment on real estate</span>
             <span class="footer-home-text">Fundion projects /Staryups</span>
           </div>
-
         </div>
       </div>
-
-
       <div class="footer-home-second-block">
-
         <div class="footer-home-second-block-policies">
           <span>Politicas de privacidad | Terminos y condiciones</span>
           <span>Copyright2024 Todos los derechos reservados</span>
         </div>
         <div class="footer-home-second-block-contact">
-
           <div class="contact-info">
             <label><em class="icon-telephone"></em></label>
             <div class="contact-info-detail">
@@ -164,7 +90,6 @@
               <span class="contact-info-text">+57 3152481362</span>
             </div>
           </div>
-
           <div class="contact-info">
             <label><em class="icon-map-marker"></em></label>
             <div class="contact-info-detail">
@@ -172,7 +97,6 @@
               <span class="contact-info-text">Cra 10b 10-108</span>
             </div>
           </div>
-
           <div class="contact-info">
             <label><em class="icon-envelope"></em></label>
             <div class="contact-info-detail">
@@ -180,16 +104,9 @@
               <span class="contact-info-text">Edwinbayona87@gmail.com</span>
             </div>
           </div>
-
         </div>
-
       </div>
-
-
     </div>
-
-
   </div>
-
-
 </div>
+

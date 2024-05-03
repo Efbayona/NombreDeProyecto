@@ -9,16 +9,20 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {ApiPrefixInterceptor} from "@app/core/interceptors/api-prefix/api-prefix.interceptor";
 import {NgxWebstorageModule} from "ngx-webstorage";
 import {SharedModule} from "@app/shared/shared.module";
+import {MainComponent} from "@app/modules/main/main.component";
+import {SlickCarouselModule} from "ngx-slick-carousel";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     HttpClientModule,
+    SlickCarouselModule,
     SharedModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot({

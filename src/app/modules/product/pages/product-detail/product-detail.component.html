@@ -1,1 +1,265 @@
-<p>product-detail works!</p>
+<div class="wrapper-detail-product">
+  <div class="wrapper-image">
+    <div class="sidebar-image">
+      <img src="assets/images/product/Product-detail-2.jpg" alt="img-primary">
+      <img src="assets/images/product/Product-detail-3.jpg" alt="img-primary">
+      <img src="assets/images/product/Product-detail-4.jpg" alt="img-primary">
+      <img src="assets/images/product/Product-detail-5.jpg" alt="img-primary">
+    </div>
+    <div class="container-image">
+      <img src="assets/images/product/Product-detail-1.jpg" alt="img-primary">
+    </div>
+  </div>
+  <div class="wrapper-content">
+    <div class="header-detail">
+      <span class="title">Xiaomi Redmi Note 11 Pro Dual SIM 128 GB gris grafito 8 GB RAM</span>
+      <div class="review">
+        <div class="stars">
+          <em class="icon-star-full"></em>
+          <em class="icon-star-full"></em>
+          <em class="icon-star-full"></em>
+          <em class="icon-star-full"></em>
+          <em class="icon-star"></em>
+        </div>
+        <span>4.0</span>
+        <span class="text-review">167 Reseñas</span>
+      </div>
+      <div class="price">
+        <span>Bs.289.00</span>
+        <span> Bs.259.00</span>
+        <span>(10% OFF)</span>
+      </div>
+      <span class="description">Disfruta de la perfecta combinación de rendimiento y diseño con este ordenador Asus VivoBook X543UA. Encontrarás en él una excelente herramienta para tus trabajos de todos los días y para tus momentos de entretenimiento. Aprovecha la experiencia extraordinaria que la marca tiene para ofrecerte y optimiza la calidad de tus imágenes y videos.</span>
+    </div>
+    <div class="body-detail">
+      <div class="product-detail">
+        <div class="variant-detail">
+          <span class="title">Memoria interna</span>
+          <div class="values">
+            <span class="value-active">128GB</span>
+            <span>256GB</span>
+          </div>
+        </div>
+        <div class="variant-detail">
+          <span class="title">Memoria RAM</span>
+          <div class="values">
+            <span class="value-active">4GB</span>
+            <span>8GB</span>
+          </div>
+        </div>
+        <div class="variant-detail">
+          <span class="title">Color</span>
+          <div class="values">
+            <img src="assets/images/modules/product/Xiaomi-Change-3.png" alt="img"/>
+            <img src="assets/images/modules/product/Xiaomi-Change-3.png" class="value-active" alt="img"/>
+          </div>
+        </div>
+        <div class="quantity">
+          <span>Cantidad:</span>
+          <!--          <ng-select-->
+          <!--            class="select"-->
+          <!--            [items]="currency"-->
+          <!--            bindLabel="label"-->
+          <!--            [clearable]="false"-->
+          <!--            [searchable]="false"-->
+          <!--            [(ngModel)]="selectedCurrency">-->
+          <!--          </ng-select>-->
+        </div>
+        <div class="button-group">
+          <button>Añadir al carrito</button>
+          <button>Comprar ahora</button>
+        </div>
+      </div>
+      <div class="info-detail">
+        <div class="payment-detail">
+          <span class="title-section"><em class="icon-coin"></em>Medios de pago</span>
+          <span class="title-section"><em class="icon-credit-card"></em>Tarjetas de crédito</span>
+          <span class="description-section">Tienes hasta 48 cuotas para pagar</span>
+          <div class="card-section">
+            <img src="assets/images/visa.png" alt="img">
+            <img src="assets/images/mastercard.png" alt="img">
+          </div>
+          <span class="title-section"><em class="icon-refresh"></em>Garantía</span>
+          <span class="description-section">Este producto cuenta con garantía brinda directamente por el vendedor. si tienes mas dudas sobre la garantía, contacta con el vendedor</span>
+        </div>
+<!--        <div class="score-detail">-->
+<!--          <span class="title-section">Información sobre el vendedor</span>-->
+<!--        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="navigation-bar-detail-product">
+  <div class="navigation-contain" [ngClass]="(productDescription)?'tab-active':''">
+    <span (click)="chanScream(1)">Descripcion del producto </span>
+  </div>
+  <div class="navigation-contain" [ngClass]="(productReviews)?'tab-active':''">
+    <span (click)="chanScream(2)">Opiniones del producto</span>
+  </div>
+  <div class="navigation-contain" [ngClass]="(returnPolicy)?'tab-active':''">
+    <span (click)="chanScream(3)">Política de devolución</span>
+  </div>
+</div>
+<div class="product-page-options">
+  <div class="product-page-details">
+    <div class="product-page-detail-qualification">
+      <div class="product-page-detail-title">
+        <span>Calificación general</span>
+      </div>
+      <div class="product-page-detail-progress">
+        <div class="product-page-detail-progress-container">
+          <div class="product-page-detail-progress-bar" style="width: 40%; padding: 10px;"></div>
+        </div>
+        <div class=qualification>
+          <span style="padding-right: 4px">5</span>
+          <i class="icon-star-f" style="color: #FFBF01"></i>
+        </div>
+      </div>
+      <div class="product-page-detail-progress">
+        <div class="product-page-detail-progress-container">
+          <div class="product-page-detail-progress-bar" style="width: 80%; padding: 10px;"></div>
+        </div>
+        <div class=qualification>
+          <span style="padding-right: 4px">5</span>
+          <i class="icon-star-f" style="color: #FFBF01"></i>
+        </div>
+      </div>
+      <div class="product-page-detail-progress">
+        <div class="product-page-detail-progress-container">
+          <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
+        </div>
+        <div class=qualification>
+          <span style="padding-right: 4px">5</span>
+          <i class="icon-star-f" style="color: #FFBF01"></i>
+        </div>
+      </div>
+      <div class="product-page-detail-progress">
+        <div class="product-page-detail-progress-container">
+          <div class="product-page-detail-progress-bar" style="width: 60%; padding: 10px;"></div>
+        </div>
+        <div class=qualification>
+          <span style="padding-right: 4px">5</span>
+          <i class="icon-star-f" style="color: #FFBF01"></i>
+        </div>
+      </div>
+      <div class="product-page-detail-progress">
+        <div class="product-page-detail-progress-container">
+          <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
+        </div>
+        <div class=qualification>
+          <span style="padding-right: 4px">5</span>
+          <i class="icon-star-f" style="color: #FFBF01"></i>
+        </div>
+      </div>
+    </div>
+    <div class="product-page-detail-opinions">
+      <div class="product-page-detail-opinions-content">
+        <div class="product-page-detail-opinions-qualification">
+          <div class="icons-stars">
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <div class="opinions-date">
+            <span> 20 abr. 2022</span>
+          </div>
+        </div>
+        <div class="product-page-detail-opinions-content-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+          elementum
+          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+          tincidunt,
+          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+          felis
+          nulla massa facilisis cursus.
+        </div>
+      </div>
+      <div class="product-page-detail-opinions-content">
+        <div class="product-page-detail-opinions-qualification">
+          <div class="icons-stars">
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <div class="opinions-date">
+            <span> 20 abr. 2022</span>
+          </div>
+        </div>
+        <div class="product-page-detail-opinions-content-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+          elementum
+          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+          tincidunt,
+          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+          felis
+          nulla massa facilisis cursus.
+        </div>
+      </div>
+      <div class="product-page-detail-opinions-content">
+        <div class="product-page-detail-opinions-qualification">
+          <div class="icons-stars">
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <div class="opinions-date">
+            <span> 20 abr. 2022</span>
+          </div>
+        </div>
+        <div class="product-page-detail-opinions-content-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+          elementum
+          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+          tincidunt,
+          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+          felis
+          nulla massa facilisis cursus.
+        </div>
+      </div>
+      <div class="product-page-detail-opinions-content">
+        <div class="product-page-detail-opinions-qualification">
+          <div class="icons-stars">
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star-f"></i>
+            <i class="icon-star"></i>
+            <i class="icon-star"></i>
+          </div>
+          <div class="opinions-date">
+            <span> 20 abr. 2022</span>
+          </div>
+        </div>
+        <div class="product-page-detail-opinions-content-text">
+          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+          elementum
+          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+          tincidunt,
+          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+          felis
+          nulla massa facilisis cursus.
+        </div>
+      </div>
+      <div class="product-page-detail-opinions-subtitle">
+        <span>Ver todas las opiniones</span>
+      </div>
+    </div>
+    <div class="product-page-details-similar-products">
+      <div class="similar-products-title">
+        <span>Otros productos del vendedor</span>
+      </div>
+      <div class="similar-products-card">
+         <app-card></app-card>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="productReviews"> Opiniones</div>
+  <div *ngIf="returnPolicy">Politica</div>
+</div>
+
+

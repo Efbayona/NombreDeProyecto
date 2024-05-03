@@ -1,0 +1,77 @@
+<div class="wrapper-content-home">
+  <div class="content-home">
+    <div class="content-carousel">
+      <div class="content-carousel-first-block">
+        <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
+          <div ngxSlickItem class="carousel" *ngFor="let slide of slides">
+            <img src="{{ slide.src }}" alt="img">
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <div class="content-carousel-second-block">
+        <div class="section-first">
+          <img src="assets/images/carousel.jpg" alt="carousel-1">
+        </div>
+        <div class="section-second">
+          <img src="assets/images/carousel-2.jpg" alt="carousel-2">
+        </div>
+      </div>
+    </div>
+    <div class="content-products">
+      <span class="content-products-title">Nuevos Lanzamientos</span>
+      <div class="div">
+        <app-card (click)="navigate()"></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+      </div>
+    </div>
+    <div class="content-new-releases">
+      <div class="header-new-releases">
+        <div class="new-releases-block">
+          <div class="news">
+            <span>Novedades</span>
+            <span>ENCUENTRA LAS</span>
+            <span>MEJORES MARCAS</span>
+            <button class="button-new-releases">Ver más</button>
+          </div>
+          <img src="assets/images/marcas-1.jpg">
+        </div>
+        <div class="new-releases-block">
+          <div class="news">
+            <span>Novedades</span>
+            <span>ENCUENTRA LAS</span>
+            <span>MEJORES MARCAS</span>
+            <button class="button-new-releases">Ver más</button>
+          </div>
+          <img src="assets/images/marcas-2.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

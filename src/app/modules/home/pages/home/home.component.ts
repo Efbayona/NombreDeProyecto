@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {Categories} from "@app/modules/main/interfaces/home.interface";
 import {Router} from "@angular/router";
+import {Categories} from "@app/modules/home/interfaces/home.interface";
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-main',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -15,9 +15,6 @@ export class HomeComponent implements OnInit{
   ngOnInit() {
 
   }
-
-  value: boolean = false;
-  menuCategories: boolean = false;
 
   notificationList: Categories[] = [];
 
@@ -57,7 +54,7 @@ export class HomeComponent implements OnInit{
   };
 
   navigate() {
-    this.router.navigateByUrl('/product').then();
+    this.router.navigateByUrl('/app/product').then();
   }
 
 }

@@ -1,50 +1,66 @@
 <div class="wrapper-content-main">
   <div class="content-main">
+
+
     <div class="content-home-header">
-      <div class="header-icon">
-        <div class="div1">
-          <div class="div2">
-            <img src="assets/images/logo-home.jpg" alt="logo">
-          </div>
-          <div class="div3">
-            <span>Categorias <em></em></span>
-            <span>Ofertas</span>
-          </div>
+      <div class="section-options">
+        <label><em class="icon-ui"></em></label>
+        <label class="logo-home"><em class="icon-logo-home"></em></label>
+      </div>
+      <div class="vertical-line"></div>
+      <div class="section-categories">
+        <label> <em class="icon-categories"></em></label>
+        <span>Categorias</span>
+        <label><em class="icon-chevron-down"></em></label>
+      </div>
+      <div class="vertical-line margin-left-10"></div>
+      <div class="section-search">
+        <div class="search-input">
+          <input autocomplete="off" class="input"
+                 placeholder="Búsqueda rápida">
+          <label><em class="icon-search"></em></label>
         </div>
-        <div class="notification-container" *ngIf="categories">
-          <span>Tops</span>
-          <span>Pantalones</span>
-          <span>Vestidos</span>
-          <span>Faldas</span>
-          <span>Ropa de abrigo</span>
-          <span>Ropa de baño</span>
-          <span>Ropa interior</span>
-          <span>Accesorios</span>
-          <span>Zapatos</span>
-          <label class="notification" *ngFor="let notification of notificationList; let i = index">
-            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
-            <div class="content-data-notification">
-              <div class="content-text-notification">
-                <span class="first-title">{{ notification.title }}</span>
-                <span>{{ notification.description }}</span>
-              </div>
-              <i class="material-icons dp48 right">clear</i>
-            </div>
-          </label>
+        <div class="section-login">
+          <label><em class="icon-profile-user"></em></label>
+          <span>Ingreso</span>
+          <div class="vertical-line"></div>
+          <label><em class="icon-shopping-cart"></em></label>
         </div>
-        <div class="screen-gray" *ngIf="value"></div>
       </div>
-      <div class="header-search-input">
-        <input autocomplete="off" class="search-input"
-               placeholder="Búsqueda rápida">
-        <label><em class="icon-search"></em></label>
-      </div>
-      <div class="header-buttons">
-        <label><em class="icon-heart"></em></label>
-        <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>
-        <button class="button-login">Iniciar sesion</button>
-      </div>
+
+      <!--      <div class="header-buttons">-->
+      <!--        <label><em class="icon-heart"></em></label>-->
+      <!--        <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>-->
+      <!--        <button class="button-login">Iniciar sesion</button>-->
+      <!--      </div>-->
+
+      <!--        <div class="notification-container" *ngIf="categories">-->
+      <!--          <span>Tops</span>-->
+      <!--          <span>Pantalones</span>-->
+      <!--          <span>Vestidos</span>-->
+      <!--          <span>Faldas</span>-->
+      <!--          <span>Ropa de abrigo</span>-->
+      <!--          <span>Ropa de baño</span>-->
+      <!--          <span>Ropa interior</span>-->
+      <!--          <span>Accesorios</span>-->
+      <!--          <span>Zapatos</span>-->
+      <!--          <label class="notification" *ngFor="let notification of notificationList; let i = index">-->
+      <!--            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">-->
+      <!--            <div class="content-data-notification">-->
+      <!--              <div class="content-text-notification">-->
+      <!--                <span class="first-title">{{ notification.title }}</span>-->
+      <!--                <span>{{ notification.description }}</span>-->
+      <!--              </div>-->
+      <!--              <i class="material-icons dp48 right">clear</i>-->
+      <!--            </div>-->
+      <!--          </label>-->
+      <!--        </div>-->
+      <!--        <div class="screen-gray" *ngIf="value"></div>-->
+
+
     </div>
+
+
     <div class="container-main-content">
       <router-outlet></router-outlet>
     </div>

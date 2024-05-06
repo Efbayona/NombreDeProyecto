@@ -1,16 +1,112 @@
 <div class="wrapper-content-main">
   <div class="content-main">
 
+    <div class="section-cart" *ngIf="cart">
+      <div class="section-cart-header">
+        <span class="cart-title">Tu carrito</span>
+        <label><em class="icon-close"></em></label>
+      </div>
+      <div class="section-cart-body">
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>   <span>Body</span>
+        <span>Body</span>
+        <span>Body</span>
+
+
+
+      </div>
+      <div class="section-cart-footer">
+        <span>footer</span>
+      </div>
+    </div>
+    <div class="screen-gray" *ngIf="value"></div>
+
 
     <div class="content-home-header">
       <div class="section-options">
         <label><em class="icon-ui"></em></label>
-        <label class="logo-home"><em class="icon-logo-home"></em></label>
+        <label class="logo-home" (click)="navigateToHome()"><em class="icon-logo-home"></em></label>
       </div>
       <div class="vertical-line"></div>
       <div class="section-categories">
         <label> <em class="icon-categories"></em></label>
-        <span>Categorias</span>
+        <span (click)="openCategories()">Categorias</span>
         <label><em class="icon-chevron-down"></em></label>
       </div>
       <div class="vertical-line margin-left-10"></div>
@@ -22,45 +118,35 @@
         </div>
         <div class="section-login">
           <label><em class="icon-profile-user"></em></label>
-          <span>Ingreso</span>
+          <span (click)="navigateToAuth()">Ingreso</span>
           <div class="vertical-line"></div>
-          <label><em class="icon-shopping-cart"></em></label>
+          <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>
         </div>
       </div>
-
-      <!--      <div class="header-buttons">-->
-      <!--        <label><em class="icon-heart"></em></label>-->
-      <!--        <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>-->
-      <!--        <button class="button-login">Iniciar sesion</button>-->
-      <!--      </div>-->
-
-      <!--        <div class="notification-container" *ngIf="categories">-->
-      <!--          <span>Tops</span>-->
-      <!--          <span>Pantalones</span>-->
-      <!--          <span>Vestidos</span>-->
-      <!--          <span>Faldas</span>-->
-      <!--          <span>Ropa de abrigo</span>-->
-      <!--          <span>Ropa de baño</span>-->
-      <!--          <span>Ropa interior</span>-->
-      <!--          <span>Accesorios</span>-->
-      <!--          <span>Zapatos</span>-->
-      <!--          <label class="notification" *ngFor="let notification of notificationList; let i = index">-->
-      <!--            <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">-->
-      <!--            <div class="content-data-notification">-->
-      <!--              <div class="content-text-notification">-->
-      <!--                <span class="first-title">{{ notification.title }}</span>-->
-      <!--                <span>{{ notification.description }}</span>-->
-      <!--              </div>-->
-      <!--              <i class="material-icons dp48 right">clear</i>-->
-      <!--            </div>-->
-      <!--          </label>-->
-      <!--        </div>-->
-      <!--        <div class="screen-gray" *ngIf="value"></div>-->
-
-
     </div>
 
-
+    <div class="notification-container" *ngIf="categories">
+      <span>Tops</span>
+      <span>Pantalones</span>
+      <span>Vestidos</span>
+      <span>Faldas</span>
+      <span>Ropa de abrigo</span>
+      <span>Ropa de baño</span>
+      <span>Ropa interior</span>
+      <span>Accesorios</span>
+      <span>Zapatos</span>
+      <label class="notification" *ngFor="let notification of notificationList; let i = index">
+        <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
+        <div class="content-data-notification">
+          <div class="content-text-notification">
+            <span class="first-title">{{ notification.title }}</span>
+            <span>{{ notification.description }}</span>
+          </div>
+          <i class="material-icons dp48 right">clear</i>
+        </div>
+      </label>
+    </div>
+    <div class="screen-gray" *ngIf="value"></div>
     <div class="container-main-content">
       <router-outlet></router-outlet>
     </div>
@@ -123,6 +209,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </div>
 

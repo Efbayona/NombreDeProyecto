@@ -36,12 +36,32 @@
     padding: 4px 0;
     font-size: 16px;
     font-weight: 300;
-
   }
 
-  .card-product-price {
-    font-size: 16px;
-    font-weight: 300;
+  .section-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card-product-price {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    .cart-button {
+      padding: 6px 10px;
+      border: 1px solid theme-palette-color('grays', 300);
+      border-radius: 6px;
+      background-color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: theme-palette-color('color', 'gray');
+        color: white;
+      }
+    }
+
   }
 
 }

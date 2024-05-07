@@ -4,95 +4,46 @@
     <div class="section-cart" *ngIf="cart">
       <div class="section-cart-header">
         <span class="cart-title">Tu carrito</span>
-        <label><em class="icon-close"></em></label>
+        <label (click)="closeCart()"><em class="icon-close"></em></label>
       </div>
       <div class="section-cart-body">
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>   <span>Body</span>
-        <span>Body</span>
-        <span>Body</span>
-
-
-
+        <div class="section-cart-product">
+          <div class="cart-product-image">
+            <img src="assets/images/product/Second-1.jpg" alt="product">
+          </div>
+          <div class="cart-product-content">
+            <div class="cart-product-title">
+              <span>Camiseta Oversize Negro</span>
+              <span>2.859,99$</span>
+            </div>
+            <div class="cart-product-variants">
+              <div class="section-variants-cart">
+                <span>Color:Rojo</span>
+                <span>Talla:S</span>
+                <span>Unidades:3</span>
+              </div>
+              <div class="section-offer-cart">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="section-cart-footer">
-        <span>footer</span>
+        <div class="section-cart-footer-price">
+          <div class="footer-block-price">
+            <span class="footer-text">Subtotal:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+          <div class="footer-block-price">
+            <span class="footer-text">Precio de envio:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+          <div class="footer-block-price">
+            <span class="footer-text">Total:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+        </div>
+        <button class="footer-button">Ir a pagar</button>
       </div>
     </div>
     <div class="screen-gray" *ngIf="value"></div>
@@ -114,7 +65,7 @@
         <div class="search-input">
           <input autocomplete="off" class="input"
                  placeholder="Búsqueda rápida">
-          <label><em class="icon-search"></em></label>
+          <label (click)="navigateToFilter()"><em class="icon-search"></em></label>
         </div>
         <div class="section-login">
           <label><em class="icon-profile-user"></em></label>
@@ -124,7 +75,6 @@
         </div>
       </div>
     </div>
-
     <div class="notification-container" *ngIf="categories">
       <span>Tops</span>
       <span>Pantalones</span>

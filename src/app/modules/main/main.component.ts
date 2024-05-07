@@ -18,12 +18,18 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 
   openCart() {
     this.cart = true;
     this.value = true;
+  }
+
+  closeCart() {
+    this.cart = false;
+    this.value = false;
   }
 
   openCategories() {
@@ -38,6 +44,10 @@ export class MainComponent implements OnInit {
   navigateToAuth() {
     this.router.navigateByUrl('/').then();
   }
+
+  navigateToFilter(){
+    this.router.navigateByUrl('/app/filters').then();
+}
 
 
 }

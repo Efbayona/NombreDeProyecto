@@ -13,18 +13,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      background-color: theme-palette-color('pinks', 1);
 
-      .content-login-left {
-        width: 50%;
-        height: 100%;
-        background: white;
-      }
-
-      .content-login-right {
-        width: 50%;
-        height: 100%;
-        background-color: #24a7ad;
-      }
     }
 
     .content-card {
@@ -43,42 +33,24 @@
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
 
       .content-card-login-left {
-        width: 55%;
+        width: 50%;
         height: 100%;
         position: relative;
         border-radius: 6px;
         overflow: hidden;
 
         .div-rotate {
-          width: 620px;
-          height: 620px;
-          position: absolute;
-          border-radius: 12px;
-          z-index: 1;
-          top: -123px;
-          right: 124px;
-          transform: rotate(45deg);
-          background-color: theme-palette-color('color', 'primary');
-        }
-
-        .div-rotate-2 {
-          width: 320px;
-          height: 320px;
-          background-color: theme-palette-color('grays', 200);
-          position: absolute;
-          z-index: 1;
-          top: 212px;
-          right: 80px;
-          transform: rotate(45deg);
-          border-radius: 12px;
+          width: 100%;
+          height: 100%;
+          background-color: theme-palette-color('grays', 300);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
 
           img {
-            width: 240px;
-            height: 240px;
-            transform: rotate(314deg);
-            position: absolute;
-            top: 40px;
-            right: 45px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
           }
 
         }
@@ -86,7 +58,7 @@
       }
 
       .content-card-login-right {
-        width: 45%;
+        width: 50%;
         height: 100%;
         padding: 40px;
 
@@ -96,7 +68,7 @@
 
           .content-form-login-head {
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
 
             img {
@@ -105,11 +77,11 @@
               object-fit: contain;
             }
 
-            h1 {
-              font-size: 24px;
-              font-weight: 600;
-              color: theme-palette-color('color', 'primary');
+            em {
+              font-size: 100px;
             }
+
+
           }
 
           .content-title {
@@ -121,6 +93,7 @@
             margin-top: 14px;
             font-size: 22px;
             font-weight: 500;
+            color: theme-palette-color('color', 'gray');
           }
 
 
@@ -165,7 +138,11 @@
 
             span {
               font-size: 14px;
-              color: theme-palette-color('color', 'primary');
+              color: theme-palette-color('grays', 300);
+
+              &:hover {
+                color: theme-palette-color('color', 'hover');
+              }
             }
           }
         }

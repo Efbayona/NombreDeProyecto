@@ -1,7 +1,7 @@
 .btn-generic {
   width: 100%;
   padding: 12px 24px;
-  background-color: theme-palette-color('color', 'primary');
+  background-color: theme-palette-color('pinks', 2);
   cursor: pointer;
   outline: none;
   border: none;
@@ -11,7 +11,7 @@
   margin-top: 12px;
 
   &:hover {
-    background-color: theme-palette-color('color' , 'hover');
+    background-color: theme-palette-color('color', 'hover');
   }
 
 }

@@ -7,6 +7,8 @@ import {InputMaskDirective} from "@app/shared/directives/input-mask/input-mask.d
 import {CardComponent} from "@app/shared/layouts/card/card.component";
 import {NgSelectModule} from "@ng-select/ng-select";
 import {FormsModule} from "@angular/forms";
+import { FiltersComponent } from './layouts/filters/filters.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -14,14 +16,16 @@ import {FormsModule} from "@angular/forms";
     ShowPasswordDirective,
     LoadingComponent,
     InputMaskDirective,
-    CardComponent
+    CardComponent,
+    FiltersComponent
   ],
-  imports: [
-    CommonModule,
-    MatProgressBarModule,
-    NgSelectModule,
-    FormsModule
-  ],
+	imports: [
+		CommonModule,
+		MatProgressBarModule,
+		NgSelectModule,
+		FormsModule,
+		MatCheckboxModule
+	],
   exports: [
     MatProgressBarModule,
     ShowPasswordDirective,

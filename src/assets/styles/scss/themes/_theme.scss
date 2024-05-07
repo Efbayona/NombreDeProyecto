@@ -47,6 +47,18 @@ $theme-palette: (
     'title': #384461,
     'subtitle': #091e42
   ),
+  pinks:(
+    1: #fff1ee,
+    2: #f9b198,
+    3:#ff7f7f,
+    4:#e57373,
+    5: #f9b198,
+    6: #ffb6c1,
+    7: #ffa8a8,
+    8: #ffb3e6,
+    9: #ffc0cb,
+    10: #ffb3b3
+  )
 );
 
 @function theme-palette-color($palette,$scale) {

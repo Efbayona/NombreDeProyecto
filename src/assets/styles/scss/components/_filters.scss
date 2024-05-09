@@ -1,6 +1,6 @@
 .wrapper-content-filters {
   width: 100vw;
-  height: auto;
+  height: 100%;
   background-color: white;
 
   .content-filters {
@@ -8,13 +8,12 @@
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 40px;
     padding: 0 80px;
     margin-bottom: 40px;
 
     .section-filters-blocks {
-      width: 20%;
       height: 100%;
       display: flex;
       justify-content: center;
@@ -99,13 +98,33 @@
     }
 
     .section-filters-products {
-      width: 80%;
       height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      border: 1px solid black;
+
+      .section-filters-products-organization {
+        width: 100%;
+        height: 60px;
+        border-radius: 6px;
+        border: none;
+        outline: none;
+        box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      .filters-products {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+
     }
 
   }

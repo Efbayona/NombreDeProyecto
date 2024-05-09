@@ -58,7 +58,7 @@
       <div class="section-categories">
         <label> <em class="icon-categories"></em></label>
         <span (click)="openCategories()">Categorias</span>
-        <label><em class="icon-chevron-down"></em></label>
+        <label (click)="openCategories()"><em class="icon-chevron-down"></em></label>
       </div>
       <div class="vertical-line margin-left-10"></div>
       <div class="section-search">
@@ -96,10 +96,11 @@
         </div>
       </label>
     </div>
-    <div class="screen-gray" *ngIf="value"></div>
+
     <div class="container-main-content">
       <router-outlet></router-outlet>
     </div>
+
     <div class="footer-home">
       <div class="footer-home-first-block">
         <div class="footer-home-first-block-1">

@@ -30,6 +30,10 @@ export class AuthenticationService {
     return this._http.post<MultiFactorAuthenticationRequest, DataMultiFactorAuthenticationResponse>(EndPoints.MFA, data);
   }
 
+  public loginGoogle(): Observable<any> {
+    return this._http.get<any>(EndPoints.LOGIN_GOOGLE);
+  }
+
   public signedInSuccessfully(data: DataMultiFactorAuthenticationResponse): void {
     this.storage.setItem('access_token', data.token.access_token);
     this.storage.setItem('refresh_token', data.token.refresh_token);

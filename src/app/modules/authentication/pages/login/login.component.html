@@ -48,9 +48,12 @@
           <div class="content-form-social-networks">
             <em class="icon-facebook"></em>
             <em class="icon-twitter"></em>
-            <a href="{{variable}}" style="color: black ; text-decoration: none">
+            <a (click)="onLogin()" style="color: black; text-decoration: none">
               <em class="icon-google"></em>
             </a>
+            <div class="container authenticated" style="display:none">
+              Logged in as: <span id="user"></span>
+            </div>
           </div>
           <div class="content-login-button">
             <p>¿Olvidaste tu contraseña? <span>Recuperala aquí</span></p>

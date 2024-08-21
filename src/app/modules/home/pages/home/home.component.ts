@@ -1,20 +1,25 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Categories} from "@app/modules/home/interfaces/home.interface";
+import {HomeService} from "@app/modules/home/services/home.service";
 
 @Component({
   selector: 'app-main',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private home: HomeService) {
   }
 
-
-
   ngOnInit() {
+    this.home.getCategoriesList().subscribe({
+      next: (data) =>{
+        console.log(data)
+      }
+    })
   }
 
   notificationList: Categories[] = [];

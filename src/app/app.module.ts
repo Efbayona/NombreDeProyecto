@@ -11,6 +11,7 @@ import {NgxWebstorageModule} from "ngx-webstorage";
 import {SharedModule} from "@app/shared/shared.module";
 import {MainComponent} from "@app/modules/main/main.component";
 import {SlickCarouselModule} from "ngx-slick-carousel";
+import {OauthInterceptor} from "@app/core/interceptors/oauth/oauth.interceptor";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,12 @@ import {SlickCarouselModule} from "ngx-slick-carousel";
       provide: HTTP_INTERCEPTORS,
       useClass: ApiPrefixInterceptor,
       multi: true
-    }
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: OauthInterceptor,
+      multi: true
+    },
   ],
   bootstrap: [AppComponent]
 })

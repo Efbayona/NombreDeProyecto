@@ -3,9 +3,14 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthenticationService} from "@app/modules/authentication/services/authentication.service";
 import {MatDialog} from "@angular/material/dialog";
 import {environment} from "@env/environment";
-import {MultiFactorComponent} from "@app/modules/authentication/pages/multifactor-authentication/multi-factor.component";
+import {
+  MultiFactorComponent
+} from "@app/modules/authentication/pages/multifactor-authentication/multi-factor.component";
 import {StorageService} from "@app/core/services/storage/storage.service";
 import {UserLoginRequest, UserLoginResponse} from "@app/modules/authentication/interfaces/authentication.interface";
+import {
+  LogInWithGoogleComponent
+} from "@app/modules/authentication/modals/log-in-with-google/log-in-with-google.component";
 
 
 @Component({
@@ -21,7 +26,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private auth: AuthenticationService,
               private dialog: MatDialog,
-              private storage: StorageService) {
+              private storage: StorageService,
+              private _dialog: MatDialog,) {
   }
 
   ngOnInit() {
@@ -36,28 +42,32 @@ export class LoginComponent implements OnInit {
   }
 
 
-  sendLogin(){
-
-    if(this.formLogin.valid){
-
+  sendLogin() {
+    if (this.formLogin.valid) {
       const authLogin: UserLoginRequest = {
         user_name: this.formLogin.get('user_name')?.value,
         user_password: this.formLogin.get('user_password')?.value
       }
-
       this.auth.login(authLogin).subscribe({
-        next: (data: UserLoginResponse) =>{
+        next: (data: UserLoginResponse) => {
           this.storage.setItem('user_login', data);
           this.formLogin.reset();
-           this.dialog.open(MultiFactorComponent ,{
-             width: '600px'
-            });
+          this.dialog.open(MultiFactorComponent, {
+            width: '600px'
+          });
         }
       })
     } else {
       this.formLogin.markAllAsTouched();
     }
-
   }
+
+  onLogin() {
+    const url = this.variable;
+    const title = 'Mini Ventana';
+    const options = 'width=400,height=300,top=100,left=100';
+    window.open(url, title, options);
+  }
+
 
 }

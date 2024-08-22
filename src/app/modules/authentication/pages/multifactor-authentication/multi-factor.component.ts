@@ -10,8 +10,8 @@ import {
   MultiFactorAuthenticationRequest
 } from "@app/modules/authentication/interfaces/multifactor-authentication.interface";
 import {AuthenticationService} from "@app/modules/authentication/services/authentication.service";
-import {AlertService} from "@app/core/services/alert/alert.service";
 import {LoadingService} from "@app/core/services/loading/loading.service";
+import {AlertService} from "@app/core/services/alert/alert.service";
 
 @Component({
   selector: 'app-multifactor-authentication',
@@ -38,8 +38,8 @@ export class MultiFactorComponent implements OnInit {
     private dialog: MatDialog,
     private storage: StorageService,
     private auth: AuthenticationService,
-    private _alert: AlertService,
-    private _loader: LoadingService) {
+    private loader: LoadingService,
+    private alert: AlertService) {
   }
 
   ngOnInit() {
@@ -52,7 +52,7 @@ export class MultiFactorComponent implements OnInit {
 
     this.setTimeout = setTimeout(() => {
       this.dialog.closeAll();
-      this._alert.error('¡Tiempo expirado!. Vuelva a autenticarse.');
+      this.alert.error('¡Tiempo expirado!. Vuelva a autenticarse.');
       this.storage.removeItem('user_login');
     }, 300000);
   }
@@ -65,7 +65,7 @@ export class MultiFactorComponent implements OnInit {
 
 
   public sendCode(): void {
-    this._loader.show();
+    this.loader.show();
     this.codeInput.reset();
     this.codeInput.focusOnField(0);
     const data: MultiFactorAuthenticationRequest = {
@@ -78,11 +78,11 @@ export class MultiFactorComponent implements OnInit {
         console.log(data)
         this.destroyModal();
         this.auth.signedInSuccessfully(data);
-        this._loader.hide();
       }, error: () => {
         this.codeValid = false;
       }
     });
+    this.loader.hide();
   }
 
   resendCode(): void {

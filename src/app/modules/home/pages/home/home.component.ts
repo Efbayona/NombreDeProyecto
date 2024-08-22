@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {Categories} from "@app/modules/home/interfaces/home.interface";
+import {LoadingService} from "@app/core/services/loading/loading.service";
 import {HomeService} from "@app/modules/home/services/home.service";
 
 @Component({
@@ -11,12 +12,13 @@ import {HomeService} from "@app/modules/home/services/home.service";
 export class HomeComponent implements OnInit {
 
   constructor(private router: Router,
+              private loader: LoadingService,
               private home: HomeService) {
   }
 
   ngOnInit() {
-    this.home.getCategoriesList().subscribe({
-      next: (data) =>{
+    this.home.getCategoryList().subscribe({
+      next:(data)=>{
         console.log(data)
       }
     })

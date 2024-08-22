@@ -34,6 +34,17 @@ export class AuthenticationService {
     return this._http.get<any>(EndPoints.LOGIN_GOOGLE);
   }
 
+  isLoggedIn(): boolean {
+    const token = this.storage.getItem('access_token');
+    return (token !== '');
+  }
+
+  public logout(): void {
+    this.storage.removeAll();
+    this.router.navigateByUrl('/').then();
+    location.reload();
+  }
+
   public signedInSuccessfully(data: DataMultiFactorAuthenticationResponse): void {
     this.storage.setItem('access_token', data.token.access_token);
     this.storage.setItem('refresh_token', data.token.refresh_token);
@@ -41,13 +52,8 @@ export class AuthenticationService {
     this.storage.setItem('menu', data.modules);
     this.storage.setItem('permissions', data.permissions);
     setTimeout(() => {
-      this.router.navigateByUrl('administration').then();
+      this.router.navigateByUrl('app/home').then();
     }, 500)
-  }
-
-  public logout(): void {
-    this.storage.removeAll();
-    this.router.navigateByUrl('/').then();
   }
 
 }

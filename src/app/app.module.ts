@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -12,6 +12,9 @@ import {SharedModule} from "@app/shared/shared.module";
 import {MainComponent} from "@app/modules/main/main.component";
 import {SlickCarouselModule} from "ngx-slick-carousel";
 import {OauthInterceptor} from "@app/core/interceptors/oauth/oauth.interceptor";
+import _default from '@angular/common/locales/es-CO';
+import {MAT_DATE_LOCALE} from "@angular/material/core";
+import {AuthInterceptor} from "@app/core/interceptors/auth/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -36,6 +39,19 @@ import {OauthInterceptor} from "@app/core/interceptors/oauth/oauth.interceptor";
       provide: HTTP_INTERCEPTORS,
       useClass: ApiPrefixInterceptor,
       multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    },
+    {
+      provide: LOCALE_ID,
+      useValue: _default
+    },
+    {
+      provide: MAT_DATE_LOCALE,
+      useValue: _default[0]
     },
     {
       provide: HTTP_INTERCEPTORS,

@@ -15,7 +15,10 @@ export const enum EndPoints {
   EXIST_EMAIL = 'secure/user/exist_email/',
   EXIST_DOCUMENT = 'secure/user/exist_document/',
 
+  /*** 5. Categories ***/
+  GET_CATEGORY_LIST = 'secure/category/list',
+
   /*** 6 Prueba ***/
-  GET_CATEGORY_LIST = 'secure/category/update',
+  GET_CATEGORY_LIST1 = 'secure/category/update',
 
 }

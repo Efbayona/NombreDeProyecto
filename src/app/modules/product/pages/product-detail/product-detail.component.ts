@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {LoadingService} from "@app/core/services/loading/loading.service";
 
 @Component({
   selector: 'app-product-detail',
@@ -15,8 +16,15 @@ export class ProductDetailComponent implements OnInit {
   productDescription: boolean = true;
   screen: number = 1;
 
-  ngOnInit() {
+  constructor(private loader: LoadingService) {
+  }
 
+
+  ngOnInit() {
+      this.loader.show()
+   setTimeout(() =>{
+     this.loader.hide();
+   },900)
   }
 
 

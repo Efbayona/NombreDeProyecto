@@ -1,7 +1,7 @@
 .wrapper-content-main {
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background-color: theme-palette-color('grays', 50);
 
   .content-main {
     width: 100%;
@@ -201,7 +201,6 @@
       width: 100%;
       height: 60px;
       border-bottom: 1px solid theme-palette-color('grays', 100);
-      margin-bottom: 24px;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -268,12 +267,14 @@
 
 
       .section-search {
-        width: 85%;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        padding-left: 20px;
 
         .search-input {
+          width: 80%;
           height: 100%;
           position: relative;
           background-color: theme-palette-color('grays', 24);
@@ -281,7 +282,6 @@
           margin-right: 100px;
 
           .input {
-            width: 50vw;
             background: none;
             font-size: 14px;
             max-height: 40px;
@@ -305,8 +305,9 @@
         }
 
         .section-login {
+          width: 20%;
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
           gap: 10px;
 
@@ -330,8 +331,8 @@
       cursor: default;
       position: absolute;
       z-index: 2;
-      top: 70px;
-      left: 306px;
+      top: 58px;
+      left: 330px;
       width: 260px;
       font-weight: 300;
       background: #313131;

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Categories} from "@app/modules/home/interfaces/home.interface";
 import {Router} from "@angular/router";
 
@@ -14,6 +14,19 @@ export class MainComponent implements OnInit {
   notificationList: Categories[] = [];
   cart: boolean = false;
 
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const notificationContainer = document.querySelector('.notification-container');
+
+    if (this.categories && notificationContainer && !notificationContainer.contains(target)) {
+      this.categories = false;
+    }
+  }
+
+
+
   constructor(private router: Router) {
   }
 
@@ -24,17 +37,15 @@ export class MainComponent implements OnInit {
 
   openCart() {
     this.cart = true;
-    this.value = true;
   }
 
   closeCart() {
     this.cart = false;
-    this.value = false;
   }
 
-  openCategories() {
-    this.categories = true;
-    this.value = true;
+  openCategories(event: MouseEvent) {
+    event.stopPropagation();
+    this.categories = !this.categories;
   }
 
   navigateToHome() {

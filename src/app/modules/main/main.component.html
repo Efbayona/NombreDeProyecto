@@ -46,9 +46,7 @@
         <button class="footer-button">Ir a pagar</button>
       </div>
     </div>
-    <div class="screen-gray" *ngIf="value"></div>
-
-
+    <!--div class="screen-gray" *ngIf="value"></div-->
     <div class="content-home-header">
       <div class="section-options">
         <label><em class="icon-ui"></em></label>
@@ -57,8 +55,8 @@
       <div class="vertical-line"></div>
       <div class="section-categories">
         <label> <em class="icon-categories"></em></label>
-        <span (click)="openCategories()">Categorias</span>
-        <label (click)="openCategories()"><em class="icon-chevron-down"></em></label>
+        <span (click)="openCategories($event)">Categorias</span>
+        <label (click)="openCategories($event)"><em class="icon-chevron-down"></em></label>
       </div>
       <div class="vertical-line margin-left-10"></div>
       <div class="section-search">
@@ -104,36 +102,36 @@
     <div class="footer-home">
       <div class="footer-home-first-block">
         <div class="footer-home-first-block-1">
-          <h3 class="footer-home-title">Demo logo</h3>
+          <h3 class="footer-home-title">Anais Fashion <br> Elegancia y estilo a tu medida </h3>
           <span class="footer-home-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+           En Anais Fashion, nos especializamos en la confección de todo tipo de prendas a medida. Ofrecemos uniformes personalizados para colegios, ropa profesional para el sector médico, y vestuario corporativo, asegurándonos de que cada pieza refleje calidad y estilo. Además, creamos prendas a medida para cualquier ocasión, adaptándonos a tus necesidades y preferencias. Tu imagen es nuestra prioridad.
           </span>
         </div>
         <div class="footer-home-first-block-2">
           <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Company</h3>
-            <span class="footer-home-text">About us</span>
-            <span class="footer-home-text">Investment</span>
-            <span class="footer-home-text">Recent News</span>
+            <h3 class="footer-home-subtitle">Anais Fashion</h3>
+            <span class="footer-home-text">Sobre nosotros</span>
+            <span class="footer-home-text">Contratos de Uniformes</span>
+            <span class="footer-home-text">Ropa a Medida</span>
           </div>
           <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Resources</h3>
-            <span class="footer-home-text">Company</span>
-            <span class="footer-home-text">Company</span>
-            <span class="footer-home-text">Recent News</span>
+            <h3 class="footer-home-subtitle">Servicios</h3>
+            <span class="footer-home-text">Uniformes Escolares</span>
+            <span class="footer-home-text">Uniformes Médicos</span>
+            <span class="footer-home-text">Vestuario Corporativo</span>
           </div>
           <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Investments</h3>
-            <span class="footer-home-text">incubation of small bussiness</span>
-            <span class="footer-home-text">investment on real estate</span>
-            <span class="footer-home-text">Fundion projects /Staryups</span>
+            <h3 class="footer-home-subtitle">Más Información</h3>
+            <span class="footer-home-text">Contacta con nosotros</span>
+            <span class="footer-home-text">Nuestras Sucursales</span>
+            <span class="footer-home-text">Últimas Novedades</span>
           </div>
         </div>
       </div>
       <div class="footer-home-second-block">
         <div class="footer-home-second-block-policies">
           <span>Politicas de privacidad | Terminos y condiciones</span>
-          <span>Copyright2024 Todos los derechos reservados</span>
+          <span>Copyright-2024 Todos los derechos reservados</span>
         </div>
         <div class="footer-home-second-block-contact">
           <div class="contact-info">
@@ -160,7 +158,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 

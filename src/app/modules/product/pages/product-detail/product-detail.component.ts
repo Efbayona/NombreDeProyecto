@@ -8,9 +8,6 @@ import {LoadingService} from "@app/core/services/loading/loading.service";
 })
 export class ProductDetailComponent implements OnInit {
 
-  productReviews: boolean = false;
-  returnPolicy: boolean = false;
-  screen: number = 1;
   mainImage: string = 'assets/images/product/Product-detail-1.jpg';
   secondaryImages: string[] = [
     'assets/images/product/Product-detail-2.jpg',
@@ -19,11 +16,10 @@ export class ProductDetailComponent implements OnInit {
     'assets/images/product/Product-detail-5.jpg'
   ];
 
-  selectedImage!: string;
+  selectedImage: string | null = null;
 
   constructor(private loader: LoadingService) {
   }
-
 
   ngOnInit() {
   }
@@ -32,16 +28,12 @@ export class ProductDetailComponent implements OnInit {
     this.selectedImage = this.allImages[0];
   }
 
-  get allImages(): string[] {
-    return [this.mainImage, ...this.secondaryImages];
+  closeEvent(event: null) {
+    this.selectedImage = event;
   }
 
-  openMainImage(): void {
-    // Open the main image in the image viewer
-    const imageViewer = document.querySelector('app-image-viewer') as any;
-    if (imageViewer) {
-      imageViewer.open(this.mainImage);
-    }
+  get allImages(): string[] {
+    return [this.mainImage, ...this.secondaryImages];
   }
 
 }

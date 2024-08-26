@@ -1,7 +1,7 @@
 <div class="wrapper-detail-product">
   <div class="wrapper-image">
     <div class="sidebar-image">
-      <app-image-viewer [images]="allImages" [selectedImage]="selectedImage"></app-image-viewer>
+      <app-image-viewer (closeEvent)="closeEvent($event)" [images]="allImages" [selectedImage]="selectedImage"></app-image-viewer>
     </div>
     <div class="container-image">
       <img src="assets/images/product/Product-detail-1.jpg" alt="img-primary" (click)="onImageClick()">
@@ -79,24 +79,11 @@
           <span class="title-section"><em class="icon-refresh"></em>Garantía</span>
           <span class="description-section">Este producto cuenta con garantía brinda directamente por el vendedor. si tienes mas dudas sobre la garantía, contacta con el vendedor</span>
         </div>
-        <!--        <div class="score-detail">-->
-        <!--          <span class="title-section">Información sobre el vendedor</span>-->
-        <!--        </div>-->
       </div>
     </div>
   </div>
 </div>
-<!--<div class="navigation-bar-detail-product">-->
-<!--  <div class="navigation-contain" [ngClass]="(productDescription)?'tab-active':''">-->
-<!--    <span (click)="chanScream(1)">Descripcion del producto </span>-->
-<!--  </div>-->
-<!--  <div class="navigation-contain" [ngClass]="(productReviews)?'tab-active':''">-->
-<!--    <span (click)="chanScream(2)">Opiniones del producto</span>-->
-<!--  </div>-->
-<!--  <div class="navigation-contain" [ngClass]="(returnPolicy)?'tab-active':''">-->
-<!--    <span (click)="chanScream(3)">Política de devolución</span>-->
-<!--  </div>-->
-<!--</div>-->
+
 <div class="product-page-options">
   <div class="product-page-details">
     <div class="product-page-detail-qualification">
@@ -255,8 +242,6 @@
       </div>
     </div>
   </div>
-  <div *ngIf="productReviews"> Opiniones</div>
-  <div *ngIf="returnPolicy">Politica</div>
 </div>
 
 

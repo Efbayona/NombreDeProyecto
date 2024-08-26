@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-image-viewer',
@@ -8,7 +8,8 @@ import {Component, Input} from '@angular/core';
 export class ImageViewerComponent {
 
   @Input() images: string[] = [];
-  @Input()  selectedImage: string | null = null;
+  @Input() selectedImage: string | null = null;
+  @Output() closeEvent = new EventEmitter<null>();
 
   open(image: string): void {
     this.selectedImage = image;
@@ -18,6 +19,7 @@ export class ImageViewerComponent {
   close(): void {
     this.selectedImage = null;
     this.unblockScroll();
+    this.closeEvent.emit(null);
   }
 
   prev(): void {

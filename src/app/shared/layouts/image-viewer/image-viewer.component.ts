@@ -8,14 +8,16 @@ import {Component, Input} from '@angular/core';
 export class ImageViewerComponent {
 
   @Input() images: string[] = [];
-  selectedImage: string | null = null;
+  @Input()  selectedImage: string | null = null;
 
   open(image: string): void {
     this.selectedImage = image;
+    this.blockScroll();
   }
 
   close(): void {
     this.selectedImage = null;
+    this.unblockScroll();
   }
 
   prev(): void {
@@ -37,6 +39,14 @@ export class ImageViewerComponent {
       this.close();
     }
     event.stopPropagation(); //Detener la propagacion pero no es necesario
+  }
+
+  private blockScroll(): void {
+    document.body.style.overflow = 'hidden';
+  }
+
+  private unblockScroll(): void {
+    document.body.style.overflow = '';
   }
 
 }

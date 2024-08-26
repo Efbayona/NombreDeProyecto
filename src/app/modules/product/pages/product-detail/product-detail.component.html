@@ -1,10 +1,10 @@
 <div class="wrapper-detail-product">
   <div class="wrapper-image">
     <div class="sidebar-image">
-      <app-image-viewer [images]="imageUrls"></app-image-viewer>
+      <app-image-viewer [images]="allImages" [selectedImage]="selectedImage"></app-image-viewer>
     </div>
     <div class="container-image">
-      <img src="assets/images/product/Product-detail-1.jpg" alt="img-primary">
+      <img src="assets/images/product/Product-detail-1.jpg" alt="img-primary" (click)="onImageClick()">
     </div>
   </div>
   <div class="wrapper-content">

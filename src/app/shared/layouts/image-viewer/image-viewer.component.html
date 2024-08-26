@@ -1,7 +1,6 @@
 <div class="gallery">
   <img *ngFor="let image of images" [src]="image" (click)="open(image)" />
 </div>
-
 <div class="modal" *ngIf="selectedImage" (click)="onModalClick($event)">
   <span class="close" (click)="close()">&times;</span>
   <img class="modal-content" [src]="selectedImage" />

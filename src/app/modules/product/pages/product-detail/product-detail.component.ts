@@ -16,6 +16,15 @@ export class ProductDetailComponent implements OnInit {
   productDescription: boolean = true;
   screen: number = 1;
 
+  imageUrls: string[] = [
+    'assets/images/product/Product-detail-2.jpg',
+    'assets/images/product/Product-detail-3.jpg',
+    'assets/images/product/Product-detail-4.jpg',
+    'assets/images/product/Product-detail-5.jpg'
+  ];
+
+
+
   constructor(private loader: LoadingService) {
   }
 
@@ -27,31 +36,6 @@ export class ProductDetailComponent implements OnInit {
    },900)
   }
 
-
-  chanScream(scream: number): void {
-    switch (scream) {
-      case 1:
-        this.setOff();
-        this.productDescription = true;
-        this.screen = 1;
-        this.typeBackground = 1;
-        break;
-
-      case 2:
-        this.setOff();
-        this.productReviews = true;
-        this.screen = 2;
-        this.typeBackground = 2;
-        break;
-
-      case 3:
-        this.setOff();
-        this.returnPolicy = true;
-        this.screen = 3;
-        this.typeBackground = 3;
-        break;
-    }
-  }
 
 
   setOff() {

@@ -9,6 +9,7 @@ import {NgSelectModule} from "@ng-select/ng-select";
 import {FormsModule} from "@angular/forms";
 import { FiltersComponent } from './layouts/filters/filters.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     LoadingComponent,
     InputMaskDirective,
     CardComponent,
-    FiltersComponent
+    FiltersComponent,
+    ImageViewerComponent
   ],
 	imports: [
 		CommonModule,
@@ -33,7 +35,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     InputMaskDirective,
     CardComponent,
     NgSelectModule,
-    FormsModule
+    FormsModule,
+    ImageViewerComponent
   ]
 })
 export class SharedModule { }

@@ -26,6 +26,8 @@ export class ImageViewerComponent {
     const index = this.images.indexOf(this.selectedImage || '');
     if (index > 0) {
       this.selectedImage = this.images[index - 1];
+    } else {
+      this.selectedImage = this.images[this.images.length - 1];
     }
   }
 
@@ -33,6 +35,8 @@ export class ImageViewerComponent {
     const index = this.images.indexOf(this.selectedImage || '');
     if (index < this.images.length - 1) {
       this.selectedImage = this.images[index + 1];
+    } else {
+      this.selectedImage = this.images[0];
     }
   }
 

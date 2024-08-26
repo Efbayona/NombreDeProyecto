@@ -224,9 +224,14 @@
         align-items: center;
         gap: 10px;
 
-        em {
-          font-size: 20px;
-          color: theme-palette-color('color', 'gray');
+        .logo-ui {
+          padding-top: 4px;
+
+          em {
+            font-size: 20px;
+            color: theme-palette-color('color', 'gray');
+          }
+
         }
 
         .logo-home {
@@ -256,6 +261,7 @@
         label {
           font-size: 16px;
           color: theme-palette-color('color', 'gray');
+          padding-top: 4px;
         }
 
         em {
@@ -317,9 +323,13 @@
             color: theme-palette-color('color', 'gray');
           }
 
-          em {
-            font-size: 20px;
-            color: theme-palette-color('color', 'gray');
+          label {
+            padding-top: 4px;
+
+            em {
+              font-size: 20px;
+              color: theme-palette-color('color', 'gray');
+            }
           }
 
         }

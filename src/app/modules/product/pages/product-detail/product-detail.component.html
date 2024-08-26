@@ -1,7 +1,8 @@
 <div class="wrapper-detail-product">
   <div class="wrapper-image">
     <div class="sidebar-image">
-      <app-image-viewer (closeEvent)="closeEvent($event)" [images]="allImages" [selectedImage]="selectedImage"></app-image-viewer>
+      <app-image-viewer (closeEvent)="closeEvent($event)" [images]="allImages"
+                        [selectedImage]="selectedImage"></app-image-viewer>
     </div>
     <div class="container-image">
       <img src="assets/images/product/Product-detail-1.jpg" alt="img-primary" (click)="onImageClick()">
@@ -31,24 +32,23 @@
     <div class="body-detail">
       <div class="product-detail">
         <div class="variant-detail">
-          <span class="title">Memoria interna</span>
+          <span class="variant-detail-title">Tallas</span>
           <div class="values">
-            <span class="value-active">128GB</span>
-            <span>256GB</span>
+            <span class="values-sizes">XS </span>
+            <span class="values-sizes">S</span>
+            <span class="values-sizes">M</span>
+            <span class="values-sizes">L</span>
+            <span class="values-sizes">XL</span>
+            <span class="values-sizes">XXL</span>
+            <span class="values-sizes">XXXL</span>
           </div>
         </div>
         <div class="variant-detail">
-          <span class="title">Memoria RAM</span>
+          <span class="variant-detail-title">Color</span>
           <div class="values">
-            <span class="value-active">4GB</span>
-            <span>8GB</span>
-          </div>
-        </div>
-        <div class="variant-detail">
-          <span class="title">Color</span>
-          <div class="values">
-            <img src="assets/images/modules/product/Xiaomi-Change-3.png" alt="img"/>
-            <img src="assets/images/modules/product/Xiaomi-Change-3.png" class="value-active" alt="img"/>
+            <span class="value-active values-colors " style="background-color: cadetblue"></span>
+            <span class="value-active values-colors" style="background-color: lightpink"></span>
+            <span class="value-active values-colors" style="background-color: lightseagreen"></span>
           </div>
         </div>
         <div class="quantity">
@@ -68,178 +68,161 @@
         </div>
       </div>
       <div class="info-detail">
-        <div class="payment-detail">
-          <span class="title-section"><em class="icon-coin"></em>Medios de pago</span>
-          <span class="title-section"><em class="icon-credit-card"></em>Tarjetas de crédito</span>
-          <span class="description-section">Tienes hasta 48 cuotas para pagar</span>
-          <div class="card-section">
-            <img src="assets/images/visa.png" alt="img">
-            <img src="assets/images/mastercard.png" alt="img">
-          </div>
-          <span class="title-section"><em class="icon-refresh"></em>Garantía</span>
-          <span class="description-section">Este producto cuenta con garantía brinda directamente por el vendedor. si tienes mas dudas sobre la garantía, contacta con el vendedor</span>
-        </div>
+        <span class="title-section"><em class="icon-coin"></em>Pago Contra Entrega</span>
+        <span class="text-section">Paga de manera segura al recibir el producto en tu hogar. Este método te permite inspeccionar el producto antes de pagar, asegurando tu satisfacción. Puedes pagar en efectivo o, en algunas áreas, con otros métodos como transferencia bancaria. Ideal para quienes prefieren verificar la calidad antes de completar la compra.</span>
+        <span class="title-section"><em class="icon-refresh"></em>Garantía</span>
+        <span class="description-section">Este producto cuenta con garantía brinda directamente por el vendedor. si tienes mas dudas sobre la garantía, contacta con el vendedor</span>
       </div>
     </div>
   </div>
 </div>
 
 <div class="product-page-options">
-  <div class="product-page-details">
-    <div class="product-page-detail-qualification">
-      <div class="product-page-detail-title">
-        <span>Calificación general</span>
+  <div class="product-page-detail-qualification">
+    <div class="product-page-detail-title">
+      <span>Calificación general</span>
+    </div>
+    <div class="product-page-detail-progress">
+      <div class="product-page-detail-progress-container">
+        <div class="product-page-detail-progress-bar" style="width: 40%; padding: 10px;"></div>
       </div>
-      <div class="product-page-detail-progress">
-        <div class="product-page-detail-progress-container">
-          <div class="product-page-detail-progress-bar" style="width: 40%; padding: 10px;"></div>
-        </div>
-        <div class=qualification>
-          <span style="padding-right: 4px">5</span>
-          <i class="icon-star-f" style="color: #FFBF01"></i>
-        </div>
-      </div>
-      <div class="product-page-detail-progress">
-        <div class="product-page-detail-progress-container">
-          <div class="product-page-detail-progress-bar" style="width: 80%; padding: 10px;"></div>
-        </div>
-        <div class=qualification>
-          <span style="padding-right: 4px">5</span>
-          <i class="icon-star-f" style="color: #FFBF01"></i>
-        </div>
-      </div>
-      <div class="product-page-detail-progress">
-        <div class="product-page-detail-progress-container">
-          <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
-        </div>
-        <div class=qualification>
-          <span style="padding-right: 4px">5</span>
-          <i class="icon-star-f" style="color: #FFBF01"></i>
-        </div>
-      </div>
-      <div class="product-page-detail-progress">
-        <div class="product-page-detail-progress-container">
-          <div class="product-page-detail-progress-bar" style="width: 60%; padding: 10px;"></div>
-        </div>
-        <div class=qualification>
-          <span style="padding-right: 4px">5</span>
-          <i class="icon-star-f" style="color: #FFBF01"></i>
-        </div>
-      </div>
-      <div class="product-page-detail-progress">
-        <div class="product-page-detail-progress-container">
-          <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
-        </div>
-        <div class=qualification>
-          <span style="padding-right: 4px">5</span>
-          <i class="icon-star-f" style="color: #FFBF01"></i>
-        </div>
+      <div class=qualification>
+        <span style="padding-right: 4px">5</span>
+        <i class="icon-star-f" style="color: #FFBF01"></i>
       </div>
     </div>
-    <div class="product-page-detail-opinions">
-      <div class="product-page-detail-opinions-content">
-        <div class="product-page-detail-opinions-qualification">
-          <div class="icons-stars">
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-          </div>
-          <div class="opinions-date">
-            <span> 20 abr. 2022</span>
-          </div>
-        </div>
-        <div class="product-page-detail-opinions-content-text">
-          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
-          elementum
-          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
-          tincidunt,
-          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
-          felis
-          nulla massa facilisis cursus.
-        </div>
+    <div class="product-page-detail-progress">
+      <div class="product-page-detail-progress-container">
+        <div class="product-page-detail-progress-bar" style="width: 80%; padding: 10px;"></div>
       </div>
-      <div class="product-page-detail-opinions-content">
-        <div class="product-page-detail-opinions-qualification">
-          <div class="icons-stars">
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-          </div>
-          <div class="opinions-date">
-            <span> 20 abr. 2022</span>
-          </div>
-        </div>
-        <div class="product-page-detail-opinions-content-text">
-          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
-          elementum
-          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
-          tincidunt,
-          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
-          felis
-          nulla massa facilisis cursus.
-        </div>
-      </div>
-      <div class="product-page-detail-opinions-content">
-        <div class="product-page-detail-opinions-qualification">
-          <div class="icons-stars">
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-          </div>
-          <div class="opinions-date">
-            <span> 20 abr. 2022</span>
-          </div>
-        </div>
-        <div class="product-page-detail-opinions-content-text">
-          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
-          elementum
-          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
-          tincidunt,
-          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
-          felis
-          nulla massa facilisis cursus.
-        </div>
-      </div>
-      <div class="product-page-detail-opinions-content">
-        <div class="product-page-detail-opinions-qualification">
-          <div class="icons-stars">
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star-f"></i>
-            <i class="icon-star"></i>
-            <i class="icon-star"></i>
-          </div>
-          <div class="opinions-date">
-            <span> 20 abr. 2022</span>
-          </div>
-        </div>
-        <div class="product-page-detail-opinions-content-text">
-          Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
-          elementum
-          magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
-          tincidunt,
-          interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
-          felis
-          nulla massa facilisis cursus.
-        </div>
-      </div>
-      <div class="product-page-detail-opinions-subtitle">
-        <span>Ver todas las opiniones</span>
+      <div class=qualification>
+        <span style="padding-right: 4px">5</span>
+        <i class="icon-star-f" style="color: #FFBF01"></i>
       </div>
     </div>
-    <div class="product-page-details-similar-products">
-      <div class="similar-products-title">
-        <span>Otros productos</span>
+    <div class="product-page-detail-progress">
+      <div class="product-page-detail-progress-container">
+        <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
       </div>
-      <div class="similar-products-card">
-        <app-card></app-card>
+      <div class=qualification>
+        <span style="padding-right: 4px">5</span>
+        <i class="icon-star-f" style="color: #FFBF01"></i>
       </div>
+    </div>
+    <div class="product-page-detail-progress">
+      <div class="product-page-detail-progress-container">
+        <div class="product-page-detail-progress-bar" style="width: 60%; padding: 10px;"></div>
+      </div>
+      <div class=qualification>
+        <span style="padding-right: 4px">5</span>
+        <i class="icon-star-f" style="color: #FFBF01"></i>
+      </div>
+    </div>
+    <div class="product-page-detail-progress">
+      <div class="product-page-detail-progress-container">
+        <div class="product-page-detail-progress-bar" style="width: 50%; padding: 10px;"></div>
+      </div>
+      <div class=qualification>
+        <span style="padding-right: 4px">5</span>
+        <i class="icon-star-f" style="color: #FFBF01"></i>
+      </div>
+    </div>
+  </div>
+  <div class="product-page-detail-opinions">
+    <div class="product-page-detail-opinions-content">
+      <div class="product-page-detail-opinions-qualification">
+        <div class="icons-stars">
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star"></i>
+          <i class="icon-star"></i>
+        </div>
+        <span class="opinions-date"> 20 abr. 2022</span>
+      </div>
+      <div class="product-page-detail-opinions-content-text">
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+        elementum
+        magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+        tincidunt,
+        interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+        felis
+        nulla massa facilisis cursus.
+      </div>
+    </div>
+    <div class="product-page-detail-opinions-content">
+      <div class="product-page-detail-opinions-qualification">
+        <div class="icons-stars">
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star"></i>
+          <i class="icon-star"></i>
+        </div>
+        <span class="opinions-date"> 20 abr. 2022</span>
+      </div>
+      <div class="product-page-detail-opinions-content-text">
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+        elementum
+        magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+        tincidunt,
+        interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+        felis
+        nulla massa facilisis cursus.
+      </div>
+    </div>
+    <div class="product-page-detail-opinions-content">
+      <div class="product-page-detail-opinions-qualification">
+        <div class="icons-stars">
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star"></i>
+          <i class="icon-star"></i>
+        </div>
+        <span class="opinions-date"> 20 abr. 2022</span>
+      </div>
+      <div class="product-page-detail-opinions-content-text">
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+        elementum
+        magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+        tincidunt,
+        interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+        felis
+        nulla massa facilisis cursus.
+      </div>
+    </div>
+    <div class="product-page-detail-opinions-content">
+      <div class="product-page-detail-opinions-qualification">
+        <div class="icons-stars">
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star-f"></i>
+          <i class="icon-star"></i>
+          <i class="icon-star"></i>
+        </div>
+        <span class="opinions-date"> 20 abr. 2022</span>
+      </div>
+      <div class="product-page-detail-opinions-content-text">
+        Lorem ipsum dolor sit amet consectetur adipiscing, elit phasellus dapibus ac scelerisque
+        elementum
+        magna, velit feugiat id massa felis. At quis himenaeos a pellentesque etiam nisl nascetur
+        tincidunt,
+        interdum nibh bibendum consequat sapien mauris eleifend sodales phasellus, accumsan porttitor
+        felis
+        nulla massa facilisis cursus.
+      </div>
+    </div>
+    <div class="product-page-detail-opinions-subtitle">
+      <span>Ver todas las opiniones</span>
+    </div>
+  </div>
+  <div class="product-page-details-similar-products">
+    <div class="similar-products-title">
+      <span>Otros productos</span>
+    </div>
+    <div class="similar-products-card">
+      <app-card></app-card>
     </div>
   </div>
 </div>

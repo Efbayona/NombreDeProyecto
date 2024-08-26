@@ -89,8 +89,7 @@
         justify-content: space-evenly;
         align-items: center;
         flex-wrap: wrap;
-        gap: 32px;
-        padding: 0 20px;
+        padding: 0 60px;
 
 
         .more-button-landing-left-new-releases {
@@ -99,13 +98,12 @@
           position: absolute;
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 760px;
-          left: 88px;
+          top: 766px;
+          left: 96px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-
 
           em {
             font-size: 46px;
@@ -121,8 +119,8 @@
           position: absolute;
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 760pxpx;
-          right: 88px;
+          top: 766px;
+          right: 96px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
@@ -144,12 +142,11 @@
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
           top: 1820px;
-          left: 88px;
+          left: 96px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-
 
           em {
             font-size: 46px;
@@ -157,7 +154,6 @@
           }
 
         }
-
 
         .more-button-landing-right-best-sellers {
           width: 70px;
@@ -166,12 +162,11 @@
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
           top: 1820px;
-          right: 88px;
+          right: 96px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-
 
           em {
             font-size: 46px;
@@ -181,94 +176,6 @@
 
       }
 
-
-      .content-new-releases {
-        width: 100%;
-        height: auto;
-        margin-bottom: 40px;
-
-
-        .header-new-releases {
-          padding: 20px 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 10px;
-
-          .new-releases-block {
-            width: 584px;
-            height: 250px;
-            border: 1px solid theme-palette-color('grays', 200);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 6px;
-
-            .news {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              justify-content: center;
-              align-items: flex-start;
-              flex-direction: column;
-              padding: 32px 10px 32px 32px;
-
-              span {
-                color: theme-palette-color('font', 'subtitle');
-                font-size: 18px;
-                font-weight: 600;
-
-                &:first-child {
-                  font-size: 12px;
-                  font-weight: 500;
-                }
-
-              }
-
-              .button-new-releases {
-                min-width: 125px;
-                width: fit-content;
-                height: 36px;
-                font-size: 14px;
-                line-height: 1px;
-                margin-top: 10px;
-                background-color: theme-palette-color('color', 'gray');
-                color: white;
-                outline: none;
-                border: none;
-                border-radius: 4px;
-              }
-
-              &:hover {
-                box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);
-                transition: box-shadow .1s ease-out;
-
-                .button-new-releases {
-                  background-color: theme-palette-color('color', 'hover');
-                }
-              }
-
-            }
-
-            img {
-              width: 50%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 0 6px 6px 0;
-            }
-
-            &:hover {
-              box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);
-              transition: box-shadow .1s ease-out;
-            }
-          }
-        }
-
-        .content-search {
-
-        }
-
-      }
 
       .content-more {
         width: 100%;
@@ -397,6 +304,89 @@
             em {
               font-size: 46px;
               color: #D5D5D5;
+            }
+          }
+        }
+      }
+
+      .content-new-releases {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+
+
+        .header-new-releases {
+          padding: 20px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .new-releases-block {
+            width: 584px;
+            height: 250px;
+            border: 1px solid theme-palette-color('grays', 200);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+
+            .news {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              flex-direction: column;
+              padding: 32px 10px 32px 32px;
+
+              span {
+                color: theme-palette-color('font', 'subtitle');
+                font-size: 18px;
+                font-weight: 600;
+
+                &:first-child {
+                  font-size: 12px;
+                  font-weight: 500;
+                }
+
+              }
+
+              .button-new-releases {
+                min-width: 125px;
+                width: fit-content;
+                height: 36px;
+                font-size: 14px;
+                line-height: 1px;
+                margin-top: 10px;
+                background-color: theme-palette-color('color', 'gray');
+                color: white;
+                outline: none;
+                border: none;
+                border-radius: 4px;
+              }
+
+              &:hover {
+                box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);
+                transition: box-shadow .1s ease-out;
+
+                .button-new-releases {
+                  background-color: theme-palette-color('color', 'hover');
+                }
+              }
+
+            }
+
+            img {
+              width: 50%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 0 6px 6px 0;
+            }
+
+            &:hover {
+              box-shadow: 0 7px 16px 0 rgba(0, 0, 0, .2), 0 1px 3px 0 rgba(0, 0, 0, .1);
+              transition: box-shadow .1s ease-out;
             }
           }
         }

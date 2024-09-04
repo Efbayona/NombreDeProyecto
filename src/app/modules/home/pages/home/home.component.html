@@ -1,5 +1,7 @@
 <div class="wrapper-content-home">
+
   <div class="content-home">
+
     <div class="content-carousel">
       <div class="content-carousel-first-block">
         <ngx-slick-carousel #slickModal="slick-carousel" [config]="slideConfig">
@@ -9,6 +11,7 @@
         </ngx-slick-carousel>
       </div>
     </div>
+
     <div class="content-products">
       <span class="content-products-title">Nuevos Lanzamientos</span>
       <div class="content-products-carousel">
@@ -23,6 +26,7 @@
           <em class="icon-chevron-right p-l-5"></em>
         </div>
       </div>
+
       <div class="content-more">
         <div class="content-more-description">
           <img src="assets/images/landing-3.jpg" alt="img-landing">
@@ -59,19 +63,21 @@
           </div>
         </div>
       </div>
+
       <span class="content-products-title">Mas Vendidos</span>
       <div class="content-products-carousel">
-        <div class="more-button-landing-left-best-sellers">
+        <div class="more-button-landing-left-new-releases">
           <em class="icon-chevron-left p-r-5"></em>
         </div>
         <app-card (click)="navigate()"></app-card>
         <app-card></app-card>
         <app-card></app-card>
         <app-card></app-card>
-        <div class="more-button-landing-right-best-sellers">
+        <div class="more-button-landing-right-new-releases">
           <em class="icon-chevron-right p-l-5"></em>
         </div>
       </div>
+
       <div class="content-new-releases">
         <div class="header-new-releases">
           <div class="new-releases-block">
@@ -94,7 +100,9 @@
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </div>
 

@@ -1,0 +1,45 @@
+    <div class="section-cart" *ngIf="cart">
+      <div class="section-cart-header">
+        <span class="cart-title">Tu carrito</span>
+        <label (click)="closeCart()"><em class="icon-close"></em></label>
+      </div>
+      <div class="section-cart-body">
+        <div class="section-cart-product">
+          <div class="cart-product-image">
+            <img src="assets/images/product/Second-1.jpg" alt="product">
+          </div>
+          <div class="cart-product-content">
+            <div class="cart-product-title">
+              <span>Camiseta Oversize Negro</span>
+              <span>2.859,99$</span>
+            </div>
+            <div class="cart-product-variants">
+              <div class="section-variants-cart">
+                <span>Color:Rojo</span>
+                <span>Talla:S</span>
+                <span>Unidades:3</span>
+              </div>
+              <div class="section-offer-cart">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-cart-footer">
+        <div class="section-cart-footer-price">
+          <div class="footer-block-price">
+            <span class="footer-text">Subtotal:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+          <div class="footer-block-price">
+            <span class="footer-text">Precio de envio:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+          <div class="footer-block-price">
+            <span class="footer-text">Total:</span>
+            <span class="footer-text-price">4.479,98$</span>
+          </div>
+        </div>
+        <button class="footer-button">Ir a pagar</button>
+      </div>
+    </div>

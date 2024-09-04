@@ -1,141 +1,19 @@
 <div class="wrapper-content-main">
+
   <div class="content-main">
 
-    <div class="section-cart" *ngIf="cart">
-      <div class="section-cart-header">
-        <span class="cart-title">Tu carrito</span>
-        <label (click)="closeCart()"><em class="icon-close"></em></label>
-      </div>
-      <div class="section-cart-body">
-        <div class="section-cart-product">
-          <div class="cart-product-image">
-            <img src="assets/images/product/Second-1.jpg" alt="product">
-          </div>
-          <div class="cart-product-content">
-            <div class="cart-product-title">
-              <span>Camiseta Oversize Negro</span>
-              <span>2.859,99$</span>
-            </div>
-            <div class="cart-product-variants">
-              <div class="section-variants-cart">
-                <span>Color:Rojo</span>
-                <span>Talla:S</span>
-                <span>Unidades:3</span>
-              </div>
-              <div class="section-offer-cart">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-cart-footer">
-        <div class="section-cart-footer-price">
-          <div class="footer-block-price">
-            <span class="footer-text">Subtotal:</span>
-            <span class="footer-text-price">4.479,98$</span>
-          </div>
-          <div class="footer-block-price">
-            <span class="footer-text">Precio de envio:</span>
-            <span class="footer-text-price">4.479,98$</span>
-          </div>
-          <div class="footer-block-price">
-            <span class="footer-text">Total:</span>
-            <span class="footer-text-price">4.479,98$</span>
-          </div>
-        </div>
-        <button class="footer-button">Ir a pagar</button>
-      </div>
-    </div>
-
-    <div class="content-home-header">
+    <div class="content-main-header">
       <app-header></app-header>
     </div>
 
-    <div class="notification-container" *ngIf="categories">
-      <span>Tops</span>
-      <span>Pantalones</span>
-      <span>Vestidos</span>
-      <span>Faldas</span>
-      <span>Ropa de abrigo</span>
-      <span>Ropa de baño</span>
-      <span>Ropa interior</span>
-      <span>Accesorios</span>
-      <span>Zapatos</span>
-      <label class="notification" *ngFor="let notification of notificationList; let i = index">
-        <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
-        <div class="content-data-notification">
-          <div class="content-text-notification">
-            <span class="first-title">{{ notification.title }}</span>
-            <span>{{ notification.description }}</span>
-          </div>
-          <i class="material-icons dp48 right">clear</i>
-        </div>
-      </label>
-    </div>
-
-    <div class="container-main-content">
+    <div class="content-main-content">
       <router-outlet></router-outlet>
     </div>
 
-    <!--    <div class="footer-home">-->
-    <!--      <div class="footer-home-first-block">-->
-    <!--        <div class="footer-home-first-block-1">-->
-    <!--          <h3 class="footer-home-title">Anais Fashion <br> Elegancia y estilo a tu medida </h3>-->
-    <!--          <span class="footer-home-text">-->
-    <!--           En Anais Fashion, nos especializamos en la confección de todo tipo de prendas a medida. Ofrecemos uniformes personalizados para colegios, ropa profesional para el sector médico, y vestuario corporativo, asegurándonos de que cada pieza refleje calidad y estilo. Además, creamos prendas a medida para cualquier ocasión, adaptándonos a tus necesidades y preferencias. Tu imagen es nuestra prioridad.-->
-    <!--          </span>-->
-    <!--        </div>-->
-    <!--        <div class="footer-home-first-block-2">-->
-    <!--          <div class="footer-home-first-block-2-content">-->
-    <!--            <h3 class="footer-home-subtitle">Anais Fashion</h3>-->
-    <!--            <span class="footer-home-text">Sobre nosotros</span>-->
-    <!--            <span class="footer-home-text">Contratos de Uniformes</span>-->
-    <!--            <span class="footer-home-text">Ropa a Medida</span>-->
-    <!--          </div>-->
-    <!--          <div class="footer-home-first-block-2-content">-->
-    <!--            <h3 class="footer-home-subtitle">Servicios</h3>-->
-    <!--            <span class="footer-home-text">Uniformes Escolares</span>-->
-    <!--            <span class="footer-home-text">Uniformes Médicos</span>-->
-    <!--            <span class="footer-home-text">Vestuario Corporativo</span>-->
-    <!--          </div>-->
-    <!--          <div class="footer-home-first-block-2-content">-->
-    <!--            <h3 class="footer-home-subtitle">Más Información</h3>-->
-    <!--            <span class="footer-home-text">Contacta con nosotros</span>-->
-    <!--            <span class="footer-home-text">Nuestras Sucursales</span>-->
-    <!--            <span class="footer-home-text">Últimas Novedades</span>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--      <div class="footer-home-second-block">-->
-    <!--        <div class="footer-home-second-block-policies">-->
-    <!--          <span>Politicas de privacidad | Terminos y condiciones</span>-->
-    <!--          <span>Copyright-2024 Todos los derechos reservados</span>-->
-    <!--        </div>-->
-    <!--        <div class="footer-home-second-block-contact">-->
-    <!--          <div class="contact-info">-->
-    <!--            <label><em class="icon-telephone"></em></label>-->
-    <!--            <div class="contact-info-detail">-->
-    <!--              <span class="contact-info-title">Llamanos:</span>-->
-    <!--              <span class="contact-info-text">+57 3152481362</span>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--          <div class="contact-info">-->
-    <!--            <label><em class="icon-map-marker"></em></label>-->
-    <!--            <div class="contact-info-detail">-->
-    <!--              <span class="contact-info-title">Situado en:</span>-->
-    <!--              <span class="contact-info-text">Cra 10b 10-108</span>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--          <div class="contact-info">-->
-    <!--            <label><em class="icon-envelope"></em></label>-->
-    <!--            <div class="contact-info-detail">-->
-    <!--              <span class="contact-info-title">Correo electronico:</span>-->
-    <!--              <span class="contact-info-text">Edwinbayona87@gmail.com</span>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
+    <div class="content-main-footer">
+      <app-footer></app-footer>
+    </div>
+
   </div>
 </div>
 

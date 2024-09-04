@@ -12,6 +12,7 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { ShoppingCartComponent } from './layouts/shopping-cart/shopping-cart.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     FiltersComponent,
     ImageViewerComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ShoppingCartComponent
   ],
 	imports: [
 		CommonModule,
@@ -41,7 +43,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     NgSelectModule,
     FormsModule,
     ImageViewerComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

@@ -28,6 +28,28 @@
   </div>
 </div>
 
+  <div class="notification-container" *ngIf="categories">
+    <span>Tops</span>
+    <span>Pantalones</span>
+    <span>Vestidos</span>
+    <span>Faldas</span>
+    <span>Ropa de abrigo</span>
+    <span>Ropa de baño</span>
+    <span>Ropa interior</span>
+    <span>Accesorios</span>
+    <span>Zapatos</span>
+    <label class="notification" *ngFor="let notification of notificationList; let i = index">
+      <img [src]="notification.image ? notification.image : 'assets/images/whatsapp.png'" alt="image-channel">
+      <div class="content-data-notification">
+        <div class="content-text-notification">
+          <span class="first-title">{{ notification.title }}</span>
+          <span>{{ notification.description }}</span>
+        </div>
+        <i class="material-icons dp48 right">clear</i>
+      </div>
+    </label>
+  </div>
+
 </div>
 
 

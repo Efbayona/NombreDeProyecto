@@ -1,6 +1,6 @@
 .wrapper-content-home {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   background-color: theme-palette-color('grays', 50);
 
   .content-home {
@@ -9,12 +9,11 @@
 
     .content-carousel {
       width: 100%;
-      height: 420px;
+      height: 390px;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 20px;
-      margin-bottom: 20px;
 
       .content-carousel-first-block {
         width: 100%;
@@ -54,7 +53,7 @@
           justify-content: center;
 
           img {
-            height: 420px !important;
+            height: 390px !important;
             width: 100% !important;
             object-fit: cover;
           }
@@ -72,7 +71,6 @@
       flex-direction: column;
       align-items: center;
       padding: 0 5.4vw;
-      gap: 32px;
 
       .content-products-title {
         padding-top: 20px;
@@ -84,6 +82,7 @@
       .content-products-carousel {
         width: 100%;
         height: 460px;
+        position: relative;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -97,8 +96,8 @@
           position: absolute;
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 766px;
-          left: 96px;
+          top: 180px;
+          left: 30px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
@@ -118,8 +117,8 @@
           position: absolute;
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 766px;
-          right: 96px;
+          top: 180px;
+          right: 30px;
           border-radius: 100%;
           display: flex;
           justify-content: center;
@@ -131,46 +130,6 @@
             color: #D5D5D5;
           }
 
-        }
-
-
-        .more-button-landing-left-best-sellers {
-          width: 70px;
-          height: 70px;
-          position: absolute;
-          background-color: white;
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 1820px;
-          left: 96px;
-          border-radius: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          em {
-            font-size: 46px;
-            color: #D5D5D5;
-          }
-
-        }
-
-        .more-button-landing-right-best-sellers {
-          width: 70px;
-          height: 70px;
-          position: absolute;
-          background-color: white;
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-          top: 1820px;
-          right: 96px;
-          border-radius: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          em {
-            font-size: 46px;
-            color: #D5D5D5;
-          }
         }
 
       }
@@ -232,11 +191,13 @@
 
 
         .content-more-cards {
+          position: relative;
           width: 60%;
           height: 420px;
           display: flex;
           justify-content: center;
           align-items: center;
+
           background-color: white;
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
           border-radius: 6px;
@@ -262,7 +223,6 @@
               font-weight: 300;
               text-align: center;
             }
-
           }
 
           .more-button-landing-left {
@@ -271,20 +231,18 @@
             position: absolute;
             background-color: white;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-            top: 1252px;
-            left: 760px;
+            top: 170px;
+            left: -30px;
             border-radius: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-
 
             em {
               font-size: 46px;
               color: #D5D5D5;
             }
           }
-
 
           .more-button-landing-right {
             width: 70px;
@@ -292,20 +250,21 @@
             position: absolute;
             background-color: white;
             box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
-            top: 1252px;
-            right: 88px;
+            top: 170px;
+            right: -30px;
             border-radius: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-
 
             em {
               font-size: 46px;
               color: #D5D5D5;
             }
           }
+
         }
+
       }
 
       .content-new-releases {

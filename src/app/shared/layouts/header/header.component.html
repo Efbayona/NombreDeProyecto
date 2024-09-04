@@ -1,0 +1,33 @@
+<div class="content-header-page">
+
+<div class="first-section-header">
+  <div class="section-options">
+    <label class="logo-ui"><em class="icon-ui"></em></label>
+    <label class="logo-home" (click)="navigateToHome()"><em class="icon-logo-home"></em></label>
+  </div>
+  <div class="vertical-line"></div>
+  <div class="section-categories">
+    <label> <em class="icon-categories"></em></label>
+    <span (click)="openCategories($event)">Categorias</span>
+    <label (click)="openCategories($event)"><em class="icon-chevron-down"></em></label>
+  </div>
+  <div class="vertical-line margin-left-10"></div>
+</div>
+
+<div class="second-section-header">
+  <div class="search-input">
+    <input autocomplete="off" class="input"
+           placeholder="Búsqueda rápida">
+    <label (click)="navigateToFilter()"><em class="icon-search"></em></label>
+  </div>
+  <div class="section-login">
+    <label><em class="icon-profile-user"></em></label>
+    <span (click)="navigateToAuth()">Ingreso</span>
+    <div class="vertical-line"></div>
+    <label class="shopping-cart" (click)="openCart()"><em class="icon-shopping-cart"></em></label>
+  </div>
+</div>
+
+</div>
+
+

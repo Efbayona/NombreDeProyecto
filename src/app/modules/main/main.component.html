@@ -46,33 +46,11 @@
         <button class="footer-button">Ir a pagar</button>
       </div>
     </div>
-    <!--div class="screen-gray" *ngIf="value"></div-->
+
     <div class="content-home-header">
-      <div class="section-options">
-        <label class="logo-ui"><em class="icon-ui"></em></label>
-        <label class="logo-home" (click)="navigateToHome()"><em class="icon-logo-home"></em></label>
-      </div>
-      <div class="vertical-line"></div>
-      <div class="section-categories">
-        <label> <em class="icon-categories"></em></label>
-        <span (click)="openCategories($event)">Categorias</span>
-        <label (click)="openCategories($event)"><em class="icon-chevron-down"></em></label>
-      </div>
-      <div class="vertical-line margin-left-10"></div>
-      <div class="section-search">
-        <div class="search-input">
-          <input autocomplete="off" class="input"
-                 placeholder="Búsqueda rápida">
-          <label (click)="navigateToFilter()"><em class="icon-search"></em></label>
-        </div>
-        <div class="section-login">
-          <label><em class="icon-profile-user"></em></label>
-          <span (click)="navigateToAuth()">Ingreso</span>
-          <div class="vertical-line"></div>
-          <label (click)="openCart()"><em class="icon-shopping-cart"></em></label>
-        </div>
-      </div>
+      <app-header></app-header>
     </div>
+
     <div class="notification-container" *ngIf="categories">
       <span>Tops</span>
       <span>Pantalones</span>
@@ -99,65 +77,65 @@
       <router-outlet></router-outlet>
     </div>
 
-    <div class="footer-home">
-      <div class="footer-home-first-block">
-        <div class="footer-home-first-block-1">
-          <h3 class="footer-home-title">Anais Fashion <br> Elegancia y estilo a tu medida </h3>
-          <span class="footer-home-text">
-           En Anais Fashion, nos especializamos en la confección de todo tipo de prendas a medida. Ofrecemos uniformes personalizados para colegios, ropa profesional para el sector médico, y vestuario corporativo, asegurándonos de que cada pieza refleje calidad y estilo. Además, creamos prendas a medida para cualquier ocasión, adaptándonos a tus necesidades y preferencias. Tu imagen es nuestra prioridad.
-          </span>
-        </div>
-        <div class="footer-home-first-block-2">
-          <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Anais Fashion</h3>
-            <span class="footer-home-text">Sobre nosotros</span>
-            <span class="footer-home-text">Contratos de Uniformes</span>
-            <span class="footer-home-text">Ropa a Medida</span>
-          </div>
-          <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Servicios</h3>
-            <span class="footer-home-text">Uniformes Escolares</span>
-            <span class="footer-home-text">Uniformes Médicos</span>
-            <span class="footer-home-text">Vestuario Corporativo</span>
-          </div>
-          <div class="footer-home-first-block-2-content">
-            <h3 class="footer-home-subtitle">Más Información</h3>
-            <span class="footer-home-text">Contacta con nosotros</span>
-            <span class="footer-home-text">Nuestras Sucursales</span>
-            <span class="footer-home-text">Últimas Novedades</span>
-          </div>
-        </div>
-      </div>
-      <div class="footer-home-second-block">
-        <div class="footer-home-second-block-policies">
-          <span>Politicas de privacidad | Terminos y condiciones</span>
-          <span>Copyright-2024 Todos los derechos reservados</span>
-        </div>
-        <div class="footer-home-second-block-contact">
-          <div class="contact-info">
-            <label><em class="icon-telephone"></em></label>
-            <div class="contact-info-detail">
-              <span class="contact-info-title">Llamanos:</span>
-              <span class="contact-info-text">+57 3152481362</span>
-            </div>
-          </div>
-          <div class="contact-info">
-            <label><em class="icon-map-marker"></em></label>
-            <div class="contact-info-detail">
-              <span class="contact-info-title">Situado en:</span>
-              <span class="contact-info-text">Cra 10b 10-108</span>
-            </div>
-          </div>
-          <div class="contact-info">
-            <label><em class="icon-envelope"></em></label>
-            <div class="contact-info-detail">
-              <span class="contact-info-title">Correo electronico:</span>
-              <span class="contact-info-text">Edwinbayona87@gmail.com</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--    <div class="footer-home">-->
+    <!--      <div class="footer-home-first-block">-->
+    <!--        <div class="footer-home-first-block-1">-->
+    <!--          <h3 class="footer-home-title">Anais Fashion <br> Elegancia y estilo a tu medida </h3>-->
+    <!--          <span class="footer-home-text">-->
+    <!--           En Anais Fashion, nos especializamos en la confección de todo tipo de prendas a medida. Ofrecemos uniformes personalizados para colegios, ropa profesional para el sector médico, y vestuario corporativo, asegurándonos de que cada pieza refleje calidad y estilo. Además, creamos prendas a medida para cualquier ocasión, adaptándonos a tus necesidades y preferencias. Tu imagen es nuestra prioridad.-->
+    <!--          </span>-->
+    <!--        </div>-->
+    <!--        <div class="footer-home-first-block-2">-->
+    <!--          <div class="footer-home-first-block-2-content">-->
+    <!--            <h3 class="footer-home-subtitle">Anais Fashion</h3>-->
+    <!--            <span class="footer-home-text">Sobre nosotros</span>-->
+    <!--            <span class="footer-home-text">Contratos de Uniformes</span>-->
+    <!--            <span class="footer-home-text">Ropa a Medida</span>-->
+    <!--          </div>-->
+    <!--          <div class="footer-home-first-block-2-content">-->
+    <!--            <h3 class="footer-home-subtitle">Servicios</h3>-->
+    <!--            <span class="footer-home-text">Uniformes Escolares</span>-->
+    <!--            <span class="footer-home-text">Uniformes Médicos</span>-->
+    <!--            <span class="footer-home-text">Vestuario Corporativo</span>-->
+    <!--          </div>-->
+    <!--          <div class="footer-home-first-block-2-content">-->
+    <!--            <h3 class="footer-home-subtitle">Más Información</h3>-->
+    <!--            <span class="footer-home-text">Contacta con nosotros</span>-->
+    <!--            <span class="footer-home-text">Nuestras Sucursales</span>-->
+    <!--            <span class="footer-home-text">Últimas Novedades</span>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--      <div class="footer-home-second-block">-->
+    <!--        <div class="footer-home-second-block-policies">-->
+    <!--          <span>Politicas de privacidad | Terminos y condiciones</span>-->
+    <!--          <span>Copyright-2024 Todos los derechos reservados</span>-->
+    <!--        </div>-->
+    <!--        <div class="footer-home-second-block-contact">-->
+    <!--          <div class="contact-info">-->
+    <!--            <label><em class="icon-telephone"></em></label>-->
+    <!--            <div class="contact-info-detail">-->
+    <!--              <span class="contact-info-title">Llamanos:</span>-->
+    <!--              <span class="contact-info-text">+57 3152481362</span>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="contact-info">-->
+    <!--            <label><em class="icon-map-marker"></em></label>-->
+    <!--            <div class="contact-info-detail">-->
+    <!--              <span class="contact-info-title">Situado en:</span>-->
+    <!--              <span class="contact-info-text">Cra 10b 10-108</span>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--          <div class="contact-info">-->
+    <!--            <label><em class="icon-envelope"></em></label>-->
+    <!--            <div class="contact-info-detail">-->
+    <!--              <span class="contact-info-title">Correo electronico:</span>-->
+    <!--              <span class="contact-info-text">Edwinbayona87@gmail.com</span>-->
+    <!--            </div>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </div>
 

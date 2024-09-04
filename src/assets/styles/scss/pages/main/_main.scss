@@ -202,139 +202,9 @@
       height: 60px;
       border-bottom: 1px solid theme-palette-color('grays', 100);
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: center;
-      padding: 10px 5.4vw;
       background-color: white;
-      position: relative;
-
-      .vertical-line {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-left: 1px solid theme-palette-color('grays', 200);
-        height: 40px;
-      }
-
-      .section-options {
-        width: 140px;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-
-        .logo-ui {
-          padding-top: 4px;
-
-          em {
-            font-size: 20px;
-            color: theme-palette-color('color', 'gray');
-          }
-
-        }
-
-        .logo-home {
-
-          em {
-            font-size: 120px;
-            color: theme-palette-color('color', 'gray');
-          }
-
-        }
-      }
-
-      .section-categories {
-        width: 140px;
-        height: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        padding-left: 20px;
-        gap: 4px;
-
-        span {
-          font-size: 14px;
-          color: theme-palette-color('color', 'gray');
-        }
-
-        label {
-          font-size: 16px;
-          color: theme-palette-color('color', 'gray');
-          padding-top: 4px;
-        }
-
-        em {
-          font-size: 20px;
-          color: theme-palette-color('color', 'gray');
-        }
-
-      }
-
-
-      .section-search {
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding-left: 20px;
-
-        .search-input {
-          width: 80%;
-          height: 100%;
-          position: relative;
-          background-color: theme-palette-color('grays', 24);
-          border-radius: 4px;
-          margin-right: 100px;
-
-          .input {
-            background: none;
-            font-size: 14px;
-            max-height: 40px;
-            padding: 8px 12px;
-            border: none;
-            outline: none;
-            border-radius: 4px;
-            font-family: $font-family;
-            height: 40px;
-            cursor: text;
-          }
-
-          em {
-            position: absolute;
-            right: 12px;
-            top: 12px;
-            font-size: 16px;
-            font-weight: bolder;
-            color: theme-palette-color('grays', 600);
-          }
-        }
-
-        .section-login {
-          width: 20%;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 10px;
-
-
-          span {
-            font-size: 14px;
-            color: theme-palette-color('color', 'gray');
-          }
-
-          label {
-            padding-top: 4px;
-
-            em {
-              font-size: 20px;
-              color: theme-palette-color('color', 'gray');
-            }
-          }
-
-        }
-
-      }
     }
 
     .notification-container {
@@ -384,24 +254,6 @@
           color: theme-palette-color('color', 'gray');
           border-radius: 4px;
         }
-      }
-    }
-
-    .screen-gray {
-      position: fixed;
-      top: 0;
-      margin: 0 -16px;
-      width: 180%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.2);
-      z-index: 2;
-      overflow: hidden;
-    }
-
-    @keyframes dropPanel {
-      0% {
-        opacity: 0;
-        transform: translateY(-100px) scaleY(.5);
       }
     }
 
@@ -470,15 +322,14 @@
       cursor: pointer;
     }
 
-
     .container-main-content {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       overflow: auto;
     }
-
 
     .footer-home {
       width: 100%;
@@ -623,9 +474,6 @@
         }
       }
     }
-
-
   }
-
-
 }
+

@@ -10,6 +10,8 @@ import {FormsModule} from "@angular/forms";
 import { FiltersComponent } from './layouts/filters/filters.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
 import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.component';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.compon
     InputMaskDirective,
     CardComponent,
     FiltersComponent,
-    ImageViewerComponent
+    ImageViewerComponent,
+    HeaderComponent,
+    FooterComponent
   ],
 	imports: [
 		CommonModule,
@@ -36,7 +40,8 @@ import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.compon
     CardComponent,
     NgSelectModule,
     FormsModule,
-    ImageViewerComponent
+    ImageViewerComponent,
+    HeaderComponent
   ]
 })
 export class SharedModule { }

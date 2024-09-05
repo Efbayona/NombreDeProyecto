@@ -8,7 +8,7 @@
 
   .first-section-footer {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -125,7 +125,7 @@
 
   .second-section-footer {
     width: 100%;
-    height: 100%;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,5 +144,161 @@
     }
 
 
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1360px) {
+
+  .content-footer {
+
+    .first-section-footer {
+      padding: 0 40px 0 80px;
+      flex-direction: column;
+
+      .footer-subtitle {
+        padding: 0;
+        font-size: 14px;
+      }
+
+      .footer-title {
+        font-size: 25px;
+      }
+
+      .footer-text {
+        font-size: 14px;
+      }
+
+      .first-block {
+        width: 100%;
+        padding: 30px 0;
+      }
+
+      .second-block {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 0 20px 0;
+        gap: 20px;
+
+        .second-block-about {
+          display: none;
+        }
+
+        .second-block-services {
+          display: none;
+        }
+
+        .footer-contact {
+          width: 100%;
+          height: auto;
+          flex-direction: row;
+          justify-content: space-evenly;
+
+          .contact-info {
+            .contact-info-text {
+              font-size: 14px;
+            }
+
+            .contact-info-title {
+              font-size: 14px;
+            }
+
+          }
+
+        }
+
+      }
+
+
+    }
+
+    .second-section-footer {
+      padding: 14px 80px;
+
+      span {
+        font-size: 14px;
+      }
+
+    }
+
+  }
+
+}
+
+
+@media (min-width: 375px) and (max-width: 640px) {
+
+  .content-footer {
+    height: auto;
+
+    .first-section-footer {
+      padding: 0 20px;
+      flex-direction: column;
+      gap: 0;
+
+      .footer-subtitle {
+        padding: 0;
+        font-size: 14px;
+      }
+
+      .footer-title {
+        font-size: 25px;
+      }
+
+      .footer-text {
+        font-size: 14px;
+      }
+
+      .first-block {
+        width: 100%;
+        padding: 30px 0;
+      }
+
+      .second-block {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 0 20px 0;
+
+        .second-block-about {
+          display: none;
+        }
+
+        .second-block-services {
+          display: none;
+        }
+
+        .footer-contact {
+          width: 100%;
+          height: auto;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+          .contact-info {
+            .contact-info-text {
+              font-size: 14px;
+            }
+
+            .contact-info-title {
+              font-size: 14px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    .second-section-footer {
+      padding: 0;
+
+      span {
+        font-size: 14px;
+
+        &:first-child {
+          display: none;
+        }
+      }
+    }
   }
 }

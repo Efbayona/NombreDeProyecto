@@ -1,5 +1,4 @@
 <div class="wrapper-content-home">
-
   <div class="content-home">
 
     <div class="content-carousel">
@@ -12,97 +11,151 @@
       </div>
     </div>
 
-<!--    <div class="content-products">-->
-<!--      <span class="content-products-title">Nuevos Lanzamientos</span>-->
-<!--      <div class="content-products-carousel">-->
-<!--        <div class="more-button-landing-left-new-releases">-->
-<!--          <em class="icon-chevron-left p-r-5"></em>-->
-<!--        </div>-->
-<!--        <app-card (click)="navigate()"></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <div class="more-button-landing-right-new-releases">-->
-<!--          <em class="icon-chevron-right p-l-5"></em>-->
-<!--        </div>-->
-<!--      </div>-->
+    <div class="content-products">
 
-<!--      <div class="content-more">-->
-<!--        <div class="content-more-description">-->
-<!--          <img src="assets/images/landing-3.jpg" alt="img-landing">-->
-<!--          <span class="content-more-description-title">-->
-<!--            Lo más popular del momento-->
-<!--          </span>-->
-<!--          <span class="content-more-description-text">-->
-<!--           No te pierdas lo que todos están buscando. Descubre los productos y servicios que están arrasando y conviértete en parte de las últimas tendencias.-->
-<!--            ¡Explora lo más popular y encuentra tu próximo favorito!-->
-<!--          </span>-->
-<!--        </div>-->
-<!--        <div class="content-more-cards">-->
-<!--          <div class="more-button-landing-left">-->
-<!--            <em class="icon-chevron-left p-r-5"></em>-->
-<!--          </div>-->
-<!--          <div class="more-products">-->
-<!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
-<!--            <span>Titulo del articulo no se como se va a llamar</span>-->
-<!--          </div>-->
-<!--          <div class="more-products">-->
-<!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
-<!--            <span>Titulo del articulo no se como se va a llamar</span>-->
-<!--          </div>-->
-<!--          <div class="more-products">-->
-<!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
-<!--            <span>Titulo del articulo no se como se va a llamar</span>-->
-<!--          </div>-->
-<!--          <div class="more-products">-->
-<!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
-<!--            <span>Titulo del articulo no se como se va a llamar</span>-->
-<!--          </div>-->
-<!--          <div class="more-button-landing-right">-->
-<!--            <em class="icon-chevron-right p-l-5"></em>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
+      <span class="content-products-title">Descubre Nuestras Categorías: Encuentra Tu Estilo Perfecto</span>
+      <div class="content-products-category">
+        <div class="content-cards-category">
+          <div class="card-category">
+            <div class="content-img">
+              <img src="assets/images/category/vestidos.jpg" alt="vestidos">
+            </div>
+            <!--            <div class="content-text">-->
+            <!--              <span>Vestidos</span>-->
+            <!--            </div>-->
+          </div>
+          <div class="card-category">
+            <div class="content-img">
+              <img src="assets/images/category/blusas.jpg" alt="vestidos">
+            </div>
+            <!--            <div class="content-text">-->
+            <!--              <span>Tops y Blusas</span>-->
+            <!--            </div>-->
+          </div>
+          <div class="card-category">
+            <div class="content-img">
+              <img src="assets/images/category/jeans.jpg" alt="vestidos">
+            </div>
+            <!--            <div class="content-text">-->
+            <!--              <span>Pantalones y Jeans</span>-->
+            <!--            </div>-->
+          </div>
+          <div class="card-category">
+            <div class="content-img">
+              <img src="assets/images/category/traje-baño.jpg" alt="vestidos">
+            </div>
+            <!--            <div class="content-text">-->
+            <!--              <span>Trajes de baño</span>-->
+            <!--            </div>-->
+          </div>
+          <div class="card-category">
+            <div class="content-img">
+              <img src="assets/images/category/deportiva.jpg" alt="vestidos">
+            </div>
+            <!--            <div class="content-text">-->
+            <!--              <span>Ropa deportiva</span>-->
+            <!--            </div>-->
+          </div>
+        </div>
+      </div>
 
-<!--      <span class="content-products-title">Mas Vendidos</span>-->
-<!--      <div class="content-products-carousel">-->
-<!--        <div class="more-button-landing-left-new-releases">-->
-<!--          <em class="icon-chevron-left p-r-5"></em>-->
-<!--        </div>-->
-<!--        <app-card (click)="navigate()"></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <app-card></app-card>-->
-<!--        <div class="more-button-landing-right-new-releases">-->
-<!--          <em class="icon-chevron-right p-l-5"></em>-->
-<!--        </div>-->
-<!--      </div>-->
+      <span class="content-products-title">Nuevos Lanzamientos</span>
+      <div class="content-products-carousel">
+        <button class="more-button-landing-left-new-releases" (click)="previous()"
+                [ngClass]="getButtonClassLeft()"
+                [disabled]="currentIndex === 0">
+          <em class="icon-chevron-left p-r-5"></em>
+        </button>
+        <div class="content-cards" [ngClass]="getCardClass()">
+          <app-card *ngFor="let product of visibleProducts" [product]="product"></app-card>
+        </div>
+        <button class="more-button-landing-right-new-releases" (click)="next()"
+                [ngClass]="getButtonClassRight()"
+                [disabled]="currentIndex + itemsPerPage >= products.length"
+                *ngIf="currentIndex + itemsPerPage < products.length">
+          <em class="icon-chevron-right p-l-5"></em>
+        </button>
+      </div>
 
-<!--      <div class="content-new-releases">-->
-<!--        <div class="header-new-releases">-->
-<!--          <div class="new-releases-block">-->
-<!--            <div class="news">-->
-<!--              <span>Novedades</span>-->
-<!--              <span>ENCUENTRA LAS</span>-->
-<!--              <span>MEJORES MARCAS</span>-->
-<!--              <button class="button-new-releases">Ver más</button>-->
-<!--            </div>-->
-<!--            <img src="assets/images/marcas-1.jpg">-->
-<!--          </div>-->
-<!--          <div class="new-releases-block">-->
-<!--            <div class="news">-->
-<!--              <span>Novedades</span>-->
-<!--              <span>ENCUENTRA LAS</span>-->
-<!--              <span>MEJORES MARCAS</span>-->
-<!--              <button class="button-new-releases">Ver más</button>-->
-<!--            </div>-->
-<!--            <img src="assets/images/marcas-2.jpg">-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
 
-<!--    </div>-->
+      <!--      <div class="content-more">-->
+      <!--        <div class="content-more-description">-->
+      <!--          <img src="assets/images/landing-3.jpg" alt="img-landing">-->
+      <!--          <span class="content-more-description-title">-->
+      <!--            Lo más popular del momento-->
+      <!--          </span>-->
+      <!--          <span class="content-more-description-text">-->
+      <!--           No te pierdas lo que todos están buscando. Descubre los productos y servicios que están arrasando y conviértete en parte de las últimas tendencias.-->
+      <!--            ¡Explora lo más popular y encuentra tu próximo favorito!-->
+      <!--          </span>-->
+      <!--        </div>-->
 
+      <!--        <div class="content-more-cards">-->
+      <!--          <div class="more-button-landing-left">-->
+      <!--            <em class="icon-chevron-left p-r-5"></em>-->
+      <!--          </div>-->
+      <!--          <div class="more-products">-->
+      <!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
+      <!--            <span>Titulo del articulo no se como se va a llamar</span>-->
+      <!--          </div>-->
+      <!--          <div class="more-products">-->
+      <!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
+      <!--            <span>Titulo del articulo no se como se va a llamar</span>-->
+      <!--          </div>-->
+      <!--          <div class="more-products">-->
+      <!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
+      <!--            <span>Titulo del articulo no se como se va a llamar</span>-->
+      <!--          </div>-->
+      <!--          <div class="more-products">-->
+      <!--            <img src="assets/images/D_Q_NP_2X_818892-MCO70968695798_082023-E.webp" alt="carousel-1">-->
+      <!--            <span>Titulo del articulo no se como se va a llamar</span>-->
+      <!--          </div>-->
+      <!--          <div class="more-button-landing-right">-->
+      <!--            <em class="icon-chevron-right p-l-5"></em>-->
+      <!--          </div>-->
+      <!--        </div>-->
+
+      <!--      </div>-->
+      <span class="content-products-title">Mas Vendidos</span>
+      <div class="content-products-carousel">
+        <button class="more-button-landing-left-new-releases" (click)="previous()"
+                [ngClass]="getButtonClassLeft()"
+                [disabled]="currentIndex === 0">
+          <em class="icon-chevron-left p-r-5"></em>
+        </button>
+        <div class="content-cards" [ngClass]="getCardClass()">
+          <app-card *ngFor="let product of visibleProducts" [product]="product"></app-card>
+        </div>
+        <button class="more-button-landing-right-new-releases" (click)="next()"
+                [ngClass]="getButtonClassRight()"
+                [disabled]="currentIndex + itemsPerPage >= products.length"
+                *ngIf="currentIndex + itemsPerPage < products.length">
+          <em class="icon-chevron-right p-l-5"></em>
+        </button>
+      </div>
+      <div class="content-new-releases">
+        <div class="header-new-releases">
+          <div class="new-releases-block">
+            <div class="news">
+              <span>Novedades</span>
+              <span>ENCUENTRA LAS</span>
+              <span>MEJORES MARCAS</span>
+              <button class="button-new-releases">Ver más</button>
+            </div>
+            <img src="assets/images/marcas-1.jpg">
+          </div>
+          <div class="new-releases-block">
+            <div class="news">
+              <span>Novedades</span>
+              <span>ENCUENTRA LAS</span>
+              <span>MEJORES MARCAS</span>
+              <button class="button-new-releases">Ver más</button>
+            </div>
+            <img src="assets/images/marcas-2.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

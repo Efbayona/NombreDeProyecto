@@ -51,7 +51,7 @@ export class HeaderComponent {
   }
 
   navigateToFilter(){
-    this.router.navigateByUrl('/app/filters').then();
+    this.router.navigateByUrl('/app/product/filters').then();
   }
 
 }

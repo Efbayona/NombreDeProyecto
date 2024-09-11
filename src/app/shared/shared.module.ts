@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {ShowPasswordDirective} from "@app/shared/directives/password/show-password.directive";
 import {LoadingComponent} from "@app/shared/layouts/loading/loading.component";
@@ -7,13 +7,11 @@ import {InputMaskDirective} from "@app/shared/directives/input-mask/input-mask.d
 import {CardComponent} from "@app/shared/layouts/card/card.component";
 import {NgSelectModule} from "@ng-select/ng-select";
 import {FormsModule} from "@angular/forms";
-import { FiltersComponent } from './layouts/filters/filters.component';
 import {MatCheckboxModule} from "@angular/material/checkbox";
-import { ImageViewerComponent } from './layouts/image-viewer/image-viewer.component';
-import { HeaderComponent } from './layouts/header/header.component';
-import { FooterComponent } from './layouts/footer/footer.component';
-import { ShoppingCartComponent } from './layouts/shopping-cart/shopping-cart.component';
-
+import {ImageViewerComponent} from './layouts/image-viewer/image-viewer.component';
+import {HeaderComponent} from './layouts/header/header.component';
+import {FooterComponent} from './layouts/footer/footer.component';
+import {ShoppingCartComponent} from './layouts/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -21,19 +19,18 @@ import { ShoppingCartComponent } from './layouts/shopping-cart/shopping-cart.com
     LoadingComponent,
     InputMaskDirective,
     CardComponent,
-    FiltersComponent,
     ImageViewerComponent,
     HeaderComponent,
     FooterComponent,
     ShoppingCartComponent
   ],
-	imports: [
-		CommonModule,
-		MatProgressBarModule,
-		NgSelectModule,
-		FormsModule,
-		MatCheckboxModule
-	],
+  imports: [
+    CommonModule,
+    MatProgressBarModule,
+    NgSelectModule,
+    FormsModule,
+    MatCheckboxModule
+  ],
   exports: [
     MatProgressBarModule,
     ShowPasswordDirective,
@@ -44,7 +41,8 @@ import { ShoppingCartComponent } from './layouts/shopping-cart/shopping-cart.com
     FormsModule,
     ImageViewerComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

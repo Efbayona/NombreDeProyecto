@@ -1,0 +1,91 @@
+<div class="wrapper-content-filters">
+
+  <div class="content-filters">
+
+    <div class="filter-sort">
+      <span class="filter-sort-title">
+        <p>Home / </p>
+        Categoria
+      </span>
+      <div class="filter-sort-block">
+        <div class="filter-sort-first-section">
+          <span>24 Resultados</span>
+          <div class="filter-sort-items">
+            <span>Shirt</span>
+            <span>T-Shirt</span>
+            <span>Acesorios</span>
+            <span>Jacket</span>
+            <span>Cap</span>
+            <span>Jeans</span>
+          </div>
+        </div>
+        <div class="filter-sort-second-section">
+          <ng-select
+            class=""
+            bindLabel="label"
+            [clearable]="false"
+            [searchable]="false"
+            placeholder="Filtros">
+          </ng-select>
+          <ng-select
+            class=""
+            bindLabel="label"
+            [clearable]="false"
+            [searchable]="false"
+            placeholder="Filtros populares">
+          </ng-select>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-content">
+      <div class="filter-section-sort-bar">
+
+        <span class="sort-bar-title">Marca</span>
+        <div class="search-input-sort-bar">
+          <input autocomplete="off" class="input-sort-bar"
+                 placeholder="Búsqueda rápida">
+          <label><em class="icon-search"></em></label>
+        </div>
+        <div class="sort-bar-brands">
+          <mat-checkbox
+            [color]="'primary'">
+            <span>Luna Bella</span>
+          </mat-checkbox>
+          <mat-checkbox
+            [color]="'primary'">
+            <span>Amara Chic</span>
+          </mat-checkbox>
+          <mat-checkbox
+            [color]="'primary'">
+            <span>Senda Rosa</span>
+          </mat-checkbox>
+          <mat-checkbox
+            [color]="'primary'">
+            <span>Éclat Mode</span>
+          </mat-checkbox>
+        </div>
+        <span class="sort-bar-title">Talla</span>
+        <div class="sort-bar-sizes">
+          <span class="sizes">X</span>
+          <span class="sizes">L</span>
+          <span class="sizes">M</span>
+          <span class="sizes">XL</span>
+          <span class="sizes">XL</span>
+        </div>
+
+      </div>
+      <div class="filter-section-products">
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+        <app-card></app-card>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -12,6 +12,7 @@ import {ImageViewerComponent} from './layouts/image-viewer/image-viewer.componen
 import {HeaderComponent} from './layouts/header/header.component';
 import {FooterComponent} from './layouts/footer/footer.component';
 import {ShoppingCartComponent} from './layouts/shopping-cart/shopping-cart.component';
+import { FormatValueDirective } from './directives/format-value/format-value.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {ShoppingCartComponent} from './layouts/shopping-cart/shopping-cart.compo
     ImageViewerComponent,
     HeaderComponent,
     FooterComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    FormatValueDirective
   ],
   imports: [
     CommonModule,
@@ -42,6 +44,7 @@ import {ShoppingCartComponent} from './layouts/shopping-cart/shopping-cart.compo
     ImageViewerComponent,
     HeaderComponent,
     FooterComponent,
+    FormatValueDirective
   ]
 })
 export class SharedModule {

@@ -1,7 +1,5 @@
 <div class="wrapper-content-filters">
-
   <div class="content-filters">
-
     <div class="filter-sort">
       <span class="filter-sort-title">
         <p>Home / </p>
@@ -40,7 +38,6 @@
 
     <div class="filter-content">
       <div class="filter-section-sort-bar">
-
         <span class="sort-bar-title">Marca</span>
         <div class="search-input-sort-bar">
           <input autocomplete="off" class="input-sort-bar"
@@ -74,18 +71,39 @@
           <span class="sizes">XL</span>
         </div>
 
+<!--        <main id=app>-->
+<!--          <fieldset class="ui">-->
+<!--            <section class="prices">-->
+<!--              <div id="slider">-->
+<!--              </div>-->
+<!--            </section>-->
+<!--            <section class="fields">-->
+<!--              <input class="button-range" type="text" id="min" name="min" placeholder="Mínimo">-->
+<!--              <hr>-->
+<!--                <input class="button-range" type="text" id="max" name="max" placeholder="Máximo">-->
+<!--            </section>-->
+<!--          </fieldset>-->
+<!--        </main>-->
+
+        <span class="sort-bar-title">Categorias</span>
+        <div class="sort-bar-categories">
+          <mat-checkbox [color]="'primary'">
+            <span>Vestidos</span>
+          </mat-checkbox>
+          <mat-checkbox [color]="'primary'">
+            <span>Blusas</span>
+          </mat-checkbox>
+          <mat-checkbox [color]="'primary'">
+            <span>Faldas</span>
+          </mat-checkbox>
+          <mat-checkbox [color]="'primary'">
+            <span>Pantalones</span>
+          </mat-checkbox>
+        </div>
       </div>
       <div class="filter-section-products">
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
-        <app-card></app-card>
+        <app-card *ngFor="let product of products" [product]="product"></app-card>
       </div>
-
     </div>
-
   </div>
-
 </div>

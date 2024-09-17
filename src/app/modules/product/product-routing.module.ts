@@ -2,8 +2,6 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ProductDetailComponent} from "@app/modules/product/pages/product-detail/product-detail.component";
 import {ProductFilterComponent} from "@app/modules/product/pages/product-filter/product-filter.component";
-import {MainComponent} from "@app/modules/administration/pages/main/main.component";
-import {DashboardComponent} from "@app/modules/administration/pages/dashboard/dashboard.component";
 
 const routes: Routes = [
   {

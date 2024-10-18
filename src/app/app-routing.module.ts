@@ -25,12 +25,12 @@ const routes: Routes = [
         path: 'product',
         loadChildren: () => import('@app/modules/product/product.module').then(m => m.ProductModule),
       },
-      {
-        path: 'administration',
-        loadChildren: () => import('@app/modules/administration/administration.module').then(m => m.AdministrationModule),
-        canActivate: [AuthAdminGuard]
-      },
     ]
+  },
+  {
+    path: 'administration',
+    loadChildren: () => import('@app/modules/administration/administration.module').then(m => m.AdministrationModule),
+    canActivate: [AuthAdminGuard]
   },
 ];
 
